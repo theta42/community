@@ -709,6 +709,72 @@
           </div>
         </article>
 
+        <!-- 2026-07-18: PR #8: TypeScript Declarations, Relationship Recursion Fixes & CI Testing -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-18</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">PR #8 Merged</span>
+              <span class="chronicle-badge">TypeScript & CI</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/model-redis/pull/8" target="_blank" rel="noopener">
+              PR #8: TypeScript Declarations, Relationship Recursion Fixes & CI Testing
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged PR #8 bringing full TypeScript definitions to <code>model-redis</code>. Provides strongly-typed schema models, autocomplete for relationship fields, and enables arbitrary instance properties on Table types.</p>
+            <p>Resolved subtle recursion bugs in circular model relationships and integrated full Jest test automation directly into GitHub Actions CI.</p>
+            <div class="chronicle-code">
+              <code>npm install model-redis</code>
+              <button class="copy-btn" data-copy="npm install model-redis">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis/pull/8" target="_blank" rel="noopener" class="link-tag">GitHub PR #8 ↗</a>
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener" class="link-tag">GitHub: model-redis ↗</a>
+            <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener" class="link-tag">NPM: model-redis ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-18: Release v2.0.0: Normalized Error Contract, Non-Root Reads & Full TypeScript -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-18</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">PR #32 Merged</span>
+              <span class="chronicle-badge">Major Release v2.0.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user/pull/32" target="_blank" rel="noopener">
+              Release v2.0.0: Normalized Error Contract, Non-Root Reads & Full TypeScript
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged PR #30 and PR #32 to release the landmark v2.0.0 update of <code>linux-user</code> (published as <code>linux-sys-user</code> on NPM).</p>
+            <p>Normalized the error contract across both callback and Promise interfaces. Crucially introduced unprivileged non-root read methods (<code>getUsers</code>, <code>getUserInfo</code>, <code>getGroups</code>), allowing daemon monitoring services to inspect system accounts without elevating to root. Complete TypeScript type definitions included.</p>
+            <div class="chronicle-code">
+              <code>npm install linux-sys-user</code>
+              <button class="copy-btn" data-copy="npm install linux-sys-user">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user/pull/32" target="_blank" rel="noopener" class="link-tag">GitHub PR #32 ↗</a>
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/linux-user ↗</a>
+            <a href="https://www.npmjs.com/package/linux-sys-user" target="_blank" rel="noopener" class="link-tag">NPM: linux-sys-user ↗</a>
+          </div>
+        </article>
+
         <!-- 2026-07-11: Project Genesis: One-Command Self-Hosted Identity & Proxy Stack -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
@@ -768,6 +834,62 @@
           </div>
         </article>
 
+        <!-- 2026-07-10: PR #7: Native Time-To-Live (TTL) Key Expiration for Ephemeral Records -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-10</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">PR #7 Merged</span>
+              <span class="chronicle-badge">TTL Support</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/model-redis/pull/7" target="_blank" rel="noopener">
+              PR #7: Native Time-To-Live (TTL) Key Expiration for Ephemeral Records
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Added native TTL support to <code>model-redis</code> schema definitions.</p>
+            <p>Enables ephemeral database entities (such as session tokens, authentication challenges, and telemetry caches) to automatically expire in Redis without needing manual background cron sweeping jobs.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis/pull/7" target="_blank" rel="noopener" class="link-tag">GitHub PR #7 ↗</a>
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener" class="link-tag">wmantly/model-redis ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-03: PR #6: Generic Orphan Key Detection, Safe Pruning & Redis 6.1 Upgrade -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-03</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">PR #6 Merged</span>
+              <span class="chronicle-badge">Orphan Pruner</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/model-redis/pull/6" target="_blank" rel="noopener">
+              PR #6: Generic Orphan Key Detection, Safe Pruning & Redis 6.1 Upgrade
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Upgraded the underlying Redis driver to <code>^6.1.0</code> and engineered generic orphan key detection.</p>
+            <p>Safely audits and prunes orphaned index keys, secondary index sets, and dangling relationship pointers across high-traffic production databases without risking data loss.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis/pull/6" target="_blank" rel="noopener" class="link-tag">GitHub PR #6 ↗</a>
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener" class="link-tag">wmantly/model-redis ↗</a>
+          </div>
+        </article>
+
         <!-- 2026-02-14: Release: Autonomous Agent Skills (Tasmota, Porkbun, Minecraft & OpenClaw RAG) -->
         <article class="chronicle-card" data-category="ai">
           <div class="chronicle-meta">
@@ -820,6 +942,34 @@
           <div class="chronicle-links">
             <a href="https://github.com/theta42/proxy/pull/86" target="_blank" rel="noopener" class="link-tag">GitHub PR #86 ↗</a>
             <a href="https://github.com/theta42/proxy/pull/87" target="_blank" rel="noopener" class="link-tag">GitHub PR #87 ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025-12-30: PR #4 & #5: Comprehensive Jest Test Suite, Zero-Downtime Fixes & Docs Site -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-12-30</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">PR #4 & #5 Merged</span>
+              <span class="chronicle-badge">Release v0.3.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/model-redis/pull/4" target="_blank" rel="noopener">
+              PR #4 & #5: Comprehensive Jest Test Suite, Zero-Downtime Fixes & Docs Site
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Shipped version 0.3.0 of <code>model-redis</code>: added 100% Jest test coverage across all schema validation and index lookups, eliminated critical edge-case serialization bugs, and added CommonJS synchronous setup support (<code>setUpTable</code>).</p>
+            <p>Deployed GitHub Pages automated documentation to establish the library as a standalone open-source standard.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis/pull/4" target="_blank" rel="noopener" class="link-tag">GitHub PR #4 ↗</a>
+            <a href="https://github.com/wmantly/model-redis/pull/5" target="_blank" rel="noopener" class="link-tag">GitHub PR #5 ↗</a>
           </div>
         </article>
 
@@ -976,6 +1126,34 @@
           </div>
         </article>
 
+        <!-- 2024-01-09: Release v1.2.0: Optional Shell Arguments, Package Modernization & Node 20 LTS -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2024-01-09</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">PR #26 Merged</span>
+              <span class="chronicle-badge">Release v1.2.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user/pull/26" target="_blank" rel="noopener">
+              Release v1.2.0: Optional Shell Arguments, Package Modernization & Node 20 LTS
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged community PR #24 making the shell argument optional when creating system users, defaulting cleanly to the system login shell.</p>
+            <p>Released v1.2.0 with modern NPM dependency updates, verifying compatibility across modern systemd distributions and Node.js 20 LTS runtimes.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user/pull/24" target="_blank" rel="noopener" class="link-tag">GitHub PR #24 ↗</a>
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/linux-user ↗</a>
+          </div>
+        </article>
+
         <!-- 2023-10-03: Codeland: Self-Hosted Serverless Runtimes in Isolated Linux Containers -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
@@ -1007,7 +1185,98 @@
           </div>
         </article>
 
-        <!-- 2022-01-09: Project Genesis: model-redis Schema-Driven Object Mapper for Redis -->
+        <!-- 2023-10-15: PR #2: Multi-Tenant Key Prefix Isolation & Namespace Protection -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2023-10-15</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">PR #2 Merged</span>
+              <span class="chronicle-badge">Namespacing</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/model-redis/pull/2" target="_blank" rel="noopener">
+              PR #2: Multi-Tenant Key Prefix Isolation & Namespace Protection
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged PR #2 adding dynamic key prefix isolation to <code>model-redis</code>.</p>
+            <p>Enables multiple microservices, testing environments, or multi-tenant applications to safely share a single Redis instance without key collisions by scoping all keys and indexes under a configured namespace.</p>
+            <div class="chronicle-code">
+              <code>const userTable = new Table({ name: 'users', prefix: 'myapp:' })</code>
+              <button class="copy-btn" data-copy="const userTable = new Table({ name: 'users', prefix: 'myapp:' })">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis/pull/2" target="_blank" rel="noopener" class="link-tag">GitHub PR #2 ↗</a>
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener" class="link-tag">wmantly/model-redis ↗</a>
+          </div>
+        </article>
+
+        <!-- 2023-06-27: TypeScript Type Declarations & Native Date Expiration Support -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2023-06-27</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">Feature Release</span>
+              <span class="chronicle-badge">Type Definitions</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener">
+              TypeScript Type Declarations & Native Date Expiration Support
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Shipped official TypeScript type declarations for <code>linux-user</code>, bringing IDE autocomplete and compile-time type safety to Linux system administration.</p>
+            <p>Added support for passing native JavaScript <code>Date</code> objects directly into <code>addUser</code> for setting account expiration dates without manual date string formatting.</p>
+            <div class="chronicle-code">
+              <code>addUser({ username: 'deployer', expiredate: new Date('2026-12-31') })</code>
+              <button class="copy-btn" data-copy="addUser({ username: 'deployer', expiredate: new Date('2026-12-31') })">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/linux-user ↗</a>
+          </div>
+        </article>
+
+        <!-- 2022-04-15: PR #20 & #21: Security Hardening (Exec to Spawn) & Account Expiration Policies -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2022-04-15</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">PR #21 Merged</span>
+              <span class="chronicle-badge">Security Hardening</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user/pull/20" target="_blank" rel="noopener">
+              PR #20 & #21: Security Hardening (Exec to Spawn) & Account Expiration Policies
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Major security overhaul: replaced vulnerable shell command string execution (<code>exec</code>) with structured argument array execution (<code>spawn</code>), completely neutralizing command injection vulnerabilities.</p>
+            <p>Merged PR #21 adding account expiration date enforcement via <code>chage -E</code> and comprehensive unit tests for SSH public key verification.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user/pull/20" target="_blank" rel="noopener" class="link-tag">GitHub PR #20 ↗</a>
+            <a href="https://github.com/wmantly/linux-user/pull/21" target="_blank" rel="noopener" class="link-tag">GitHub PR #21 ↗</a>
+          </div>
+        </article>
+
+        <!-- 2022-01-09: Project Genesis: The First Commit of model-redis (Jan 9, 2022) -->
         <article class="chronicle-card" data-category="frameworks">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
@@ -1017,17 +1286,21 @@
             <div class="chronicle-badges-group">
               <span class="chronicle-repo">wmantly/model-redis</span>
               <span class="chronicle-pr-tag">Project Genesis</span>
-              <span class="chronicle-badge">Redis ORM</span>
+              <span class="chronicle-badge">Origin Commit</span>
             </div>
           </div>
           <h3 class="chronicle-title">
             <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener">
-              Project Genesis: model-redis Schema-Driven Object Mapper for Redis
+              Project Genesis: The First Commit of model-redis (Jan 9, 2022)
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>Extracted the ultra-fast Redis data modeling layer from Theta Proxy into a standalone NPM package.</p>
-            <p>Provides schema validation, index tracking, secondary key queries, and automatic JSON serialization with only a single dependency on the native <code>redis</code> client.</p>
+            <p><strong>January 9, 2022 (commit <code>4d34eb3</code>)</strong>: Initial commit of <code>wmantly/model-redis</code>.</p>
+            <p>Extracted the ultra-fast Redis data modeling layer originally developed for Theta Proxy into an independent, zero-bloat NPM package. Provides schema validation, index tracking, secondary key queries, and JSON serialization with only a single dependency on the native <code>redis</code> driver.</p>
+            <div class="chronicle-quote">
+              "Relational ORMs bring heavy overhead and connection bloat. model-redis provides clean schema modeling, indexing, and relation queries directly on Redis."
+              <span class="chronicle-quote-author">— William Mantly</span>
+            </div>
             <div class="chronicle-code">
               <code>npm install model-redis</code>
               <button class="copy-btn" data-copy="npm install model-redis">Copy</button>
@@ -1182,6 +1455,34 @@
           </div>
         </article>
 
+        <!-- 2019-09-01: PR #4 & #7: Native Promises Migration & Extended User Shell Management -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2019-09-01</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">PR #7 Merged</span>
+              <span class="chronicle-badge">Promise Architecture</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user/pull/7" target="_blank" rel="noopener">
+              PR #4 & #7: Native Promises Migration & Extended User Shell Management
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Modernized asynchronous control flow by removing external Bluebird dependencies in favor of native ES6 Promises and <code>async/await</code>.</p>
+            <p>Merged PR #4 expanding API coverage for granular shell switching, secondary group membership, and system account inspection.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user/pull/4" target="_blank" rel="noopener" class="link-tag">GitHub PR #4 ↗</a>
+            <a href="https://github.com/wmantly/linux-user/pull/7" target="_blank" rel="noopener" class="link-tag">GitHub PR #7 ↗</a>
+          </div>
+        </article>
+
         <!-- 2019-08-29: PR #6: Node.js 12 Runtime Modernization & PAM Security Hardening -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
@@ -1207,6 +1508,37 @@
           <div class="chronicle-links">
             <a href="https://github.com/theta42/proxy/pull/6" target="_blank" rel="noopener" class="link-tag">GitHub PR #6 ↗</a>
             <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2018-02-14: SSH Public Key Verification & Automated Authorized Keys Injection -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2018-02-14</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">Feature Release</span>
+              <span class="chronicle-badge">SSH Automation</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener">
+              SSH Public Key Verification & Automated Authorized Keys Injection
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Added cryptographic verification of OpenSSH public keys (<code>verifySSHKey</code>) and direct automated injection into <code>~/.ssh/authorized_keys</code> with strict POSIX permissions (<code>0600</code> / <code>0700</code>).</p>
+            <p>Engineered in February 2018 to power automated host provisioning for early Theta 42 infrastructure prototypes.</p>
+            <div class="chronicle-code">
+              <code>linuxUser.addSSHKey('deployer', 'ssh-rsa AAAAB3NzaC1yc2E...', cb)</code>
+              <button class="copy-btn" data-copy="linuxUser.addSSHKey('deployer', 'ssh-rsa AAAAB3NzaC1yc2E...', cb)">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/linux-user ↗</a>
           </div>
         </article>
 
@@ -1310,7 +1642,7 @@
           </div>
         </article>
 
-        <!-- 2014-12-11: Project Genesis: linux-user / linux-sys-user Zero-Dependency System Management -->
+        <!-- 2014-12-11: Project Genesis: The First Commit of linux-user (Dec 11, 2014) -->
         <article class="chronicle-card" data-category="frameworks">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
@@ -1320,17 +1652,17 @@
             <div class="chronicle-badges-group">
               <span class="chronicle-repo">wmantly/linux-user</span>
               <span class="chronicle-pr-tag">Project Genesis</span>
-              <span class="chronicle-badge">Sysadmin Core</span>
+              <span class="chronicle-badge">Origin Commit</span>
             </div>
           </div>
           <h3 class="chronicle-title">
             <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener">
-              Project Genesis: linux-user / linux-sys-user Zero-Dependency System Management
+              Project Genesis: The First Commit of linux-user (Dec 11, 2014)
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>Released <code>linux-user</code> (now <code>linux-sys-user</code>): managing Linux system users, groups, and SSH authorized keys directly from Node.js with zero external dependencies.</p>
-            <p>Engineered with unprivileged read-only calls for information retrieval and root requirements strictly limited to state mutations.</p>
+            <p><strong>December 11, 2014 (commit <code>4599194</code>)</strong>: The foundational first commit of <code>wmantly/linux-user</code> (published as <code>linux-sys-user</code> on NPM).</p>
+            <p>Created to provide a reliable, zero-dependency Node.js interface for managing Linux system users, groups, and SSH authorized keys directly from JavaScript. Designed with clean unprivileged read-only calls and root privileges strictly required only for state mutations.</p>
             <div class="chronicle-code">
               <code>npm install linux-sys-user</code>
               <button class="copy-btn" data-copy="npm install linux-sys-user">Copy</button>
