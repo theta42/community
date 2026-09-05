@@ -703,6 +703,104 @@ h3.chronicle-title a:hover {
   text-transform: uppercase;
 }
 
+/* DUAL ACTION CALLOUT STRIP */
+.cta-dual-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2.75rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-card:hover {
+  border-color: var(--rule);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cta-card.cta-consulting {
+  border-top: 3px solid var(--accent);
+}
+
+.cta-card.cta-donating {
+  border-top: 3px solid #8ed081;
+}
+
+.cta-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.cta-card.cta-donating .cta-badge {
+  color: #8ed081;
+}
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 1.28;
+  color: var(--white);
+  margin-bottom: 1.15rem;
+}
+
+.cta-desc {
+  color: #c4c3c0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.cta-action {
+  margin-top: auto;
+}
+
+.cta-action .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-emerald {
+  background: #8ed081;
+  border-color: #8ed081;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.btn-emerald:hover {
+  background: transparent;
+  color: #8ed081;
+}
+
+@media (max-width: 860px) {
+  .cta-dual-strip {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-top: 3rem;
+  }
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
 /* PROJECTS SHOWCASE GRID */
 .projects-grid {
   display: grid;
