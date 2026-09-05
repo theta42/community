@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://community.theta42.com/sitemap.xml

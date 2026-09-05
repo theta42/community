@@ -20,9 +20,51 @@
   <meta name="twitter:description" content="A decade of open-source tools, infrastructure releases, and community chronicles.">
   <meta name="twitter:image" content="https://theta42.com/og-image.png">
 
+  <link rel="canonical" href="https://community.theta42.com/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <script defer src="https://tracking.718it.biz/script.js" data-website-id="3a2d8bc3-c177-4af6-aa85-5c65c37516a3"></script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://theta42.com/#organization",
+        "name": "Theta42",
+        "url": "https://theta42.com",
+        "logo": "https://community.theta42.com/favicon.svg",
+        "sameAs": [
+          "https://github.com/theta42",
+          "https://github.com/simpleworkjs",
+          "https://github.com/codeland-ecosystem"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://william.mantly.vip/#person",
+        "name": "William Mantly",
+        "url": "https://william.mantly.vip/",
+        "sameAs": [
+          "https://github.com/wmantly",
+          "https://www.npmjs.com/~wmantly"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://community.theta42.com/#website",
+        "url": "https://community.theta42.com/",
+        "name": "Theta42 Community",
+        "description": "A decade of open-source tools, infrastructure releases, and community chronicles.",
+        "publisher": {
+          "@id": "https://theta42.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="grid-bg"></div>
@@ -40,9 +82,14 @@
       <li><a href="#ethos">Ethos</a></li>
       <li><a href="#community">Chat</a></li>
       <li><a href="#donate" class="active">Support</a></li>
+      <li class="mobile-only"><a href="https://william.mantly.vip/" target="_blank" rel="noopener">William's Notes ↗</a></li>
+      <li class="mobile-only"><a href="https://theta42.com/" target="_blank" rel="noopener">Enterprise AI ↗</a></li>
     </ul>
 
     <div class="nav-actions">
+      <a href="https://william.mantly.vip/" target="_blank" rel="noopener" class="nav-external">
+        William's Notes ↗
+      </a>
       <a href="https://theta42.com/" target="_blank" rel="noopener" class="nav-external">
         Enterprise AI ↗
       </a>
@@ -141,7 +188,7 @@
             </p>
             <div class="chronicle-quote">
               "Why rent a closed SaaS agent when you can run a native Rust engine directly on your hardware, hack it with Lua, and orchestrate it remotely from a clean Web UI?"
-              <span class="chronicle-quote-author">— William Mantly</span>
+              <span class="chronicle-quote-author">— <a href="https://william.mantly.vip/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">William Mantly</a></span>
             </div>
             <div class="chronicle-code">
               <code>curl -fsSL https://maki.sh/install.sh | sh</code>
@@ -750,7 +797,7 @@
           <div class="nav-logo" style="margin-bottom: 0.75rem;">Theta<span>42</span></div>
           <span class="nav-badge">Community Edition</span>
           <p class="footer-desc">
-            Open-source infrastructure, sovereign developer frameworks, and community-operated systems. Built for the web by William Mantly and Theta42.
+            Open-source infrastructure, sovereign developer frameworks, and community-operated systems. Built for the web by <a href="https://william.mantly.vip/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">William Mantly</a> and <a href="https://theta42.com/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Theta42</a>.
           </p>
         </div>
 

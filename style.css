@@ -613,7 +613,7 @@ h3.chronicle-title a:hover {
 /* PROJECTS SHOWCASE GRID */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.75rem;
 }
 
@@ -1065,5 +1065,34 @@ footer {
   }
   .donate-box {
     padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .chronicle-card {
+    padding: 1.25rem;
+  }
+  .stats-strip {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+  .chronicle-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }
