@@ -17,13 +17,13 @@
 
 ### 💬 Calls To Action
 
-> ### 🛠️ Does this sound like stuff you need help with?
+> ### 🛠️ Want to build or deploy systems like this? Let's talk.
 > **Reach out to [info@theta42.com](mailto:info@theta42.com?subject=Engineering%20Help%20Inquiry) to see how we can help.**  
 > Whether you're tuning multi-GPU inference clusters on frugal hardware, deploying zero-reload identity reverse proxies, or securing sovereign enterprise infrastructure—we engineer, test, and ship in the open.
 
-> ### ❤️ Please help us keep the community efforts going, donate.
+> ### ❤️ Help keep the hardware powered and the code free.
 > **[Click here to donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=NL263G9KDZ4GN)**  
-> 100% of community contributions go directly toward physical server electricity, enterprise replacement SSDs, ZFS mirror storage arrays, and keeping our free software and community gaming servers (like [CoreJourney](https://corejourney.org)) online with zero pay-to-win.
+> Support independent, sovereign software. 100% of community contributions go directly toward physical server electricity, enterprise replacement SSDs, ZFS mirror storage arrays, and keeping our free software and community gaming servers (like [CoreJourney](https://corejourney.org)) online with zero pay-to-win.
 
 <div align="center">
   <img src="paypal-qr.png" alt="Donate via PayPal QR Code" width="160">

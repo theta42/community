@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.addEventListener('click', () => {
       navLinks.classList.toggle('mobile-open');
     });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+      });
+    });
   }
 
   // 3. Paginated Chronicle Feed with Category Filtering
