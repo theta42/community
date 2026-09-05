@@ -165,6 +165,45 @@
       <!-- Chronicle Stream -->
       <div class="chronicle-stream">
 
+        <!-- 2026: Multi-GPU Turing LLM Cluster -->
+        <article class="chronicle-card" data-category="ai">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-09</span>
+              <span class="chronicle-category">AI & Systems</span>
+            </div>
+            <span class="chronicle-badge">Hardware Mod & LLM Engine</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener">
+              Hacking 32GB VRAM: The Multi-GPU Turing Cluster on Frugal Hardware
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Running local models with 32k+ context shouldn't require renting cloud A100s or spending $10,000 on enterprise accelerators. We engineered a <strong>32GB GDDR6 inference cluster</strong> inside a repurposed HPE ProLiant DL380p Gen8 server by pairing a desktop RTX 2060 12GB with two decommissioned NVIDIA CMP 50HX crypto mining cards (10GB each).
+            </p>
+            <p>
+              Mining silicon famously lacks display outputs and has aggressive power configurations that draw ~240W at idle. Through <strong>custom MSI VBIOS flashing</strong>, hardware strapping, and an aggressive Linux driver P-state governor, we slashed idle power draw down to a near-silent <strong>~33W</strong>.
+            </p>
+            <p>
+              We compiled <code>llama.cpp</code> with CUDA 12 and NCCL tensor parallelism across all three Turing GPUs, achieving <strong>325–500 tok/s prompt prefill speeds</strong>. To complete the stack, we wrote <code>ollama-proxy.py</code>—an intelligent API gateway offering dynamic reasoning/thinking control (switching effortlessly between instantaneous responses with <code>think_budget=0</code> and deep chain-of-thought tokens) compatible with Ollama, OpenAI, and Anthropic tooling.
+            </p>
+            <div class="chronicle-quote">
+              "Enterprise inference performance on repurposed mining silicon for under $300. The sweet spot where hardware hacking meets autonomous AI."
+            </div>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git &amp;&amp; cd turing-multi-gpu-llm-server</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/turing-multi-gpu-llm-server ↗</a>
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#power-states--tuning" target="_blank" rel="noopener" class="link-tag">Power &amp; VBIOS Guide ↗</a>
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#ollama-proxy" target="_blank" rel="noopener" class="link-tag">Ollama Proxy ↗</a>
+          </div>
+        </article>
+
         <!-- 2026: Maki Remote Control & Web UI -->
         <article class="chronicle-card" data-category="ai">
           <div class="chronicle-meta">
@@ -236,6 +275,42 @@
             <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">theta-suite ↗</a>
             <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">theta-directory ↗</a>
             <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">jump-host ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026: Theta Agent & Zero-Touch Mesh VPN -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-06</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <span class="chronicle-badge">Zero-Touch Mesh</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener">
+              Theta Agent: Zero-Touch WireGuard Mesh &amp; Fleet Directory Enrollment
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Onboarding remote Linux hosts, edge gateways, and developer laptops into a secure private network usually involves distributing static WireGuard configurations, setting up central relay bottlenecks, or paying monthly per-device subscriptions to proprietary mesh overlay providers.
+            </p>
+            <p>
+              <strong>Theta Agent</strong> is a lightweight, cross-platform Go daemon accompanied by a desktop system tray companion (<code>theta-agent-tray</code>). It automatically authenticates and enrolls endpoints directly into Theta Directory. The agent auto-generates WireGuard keypairs, establishes direct point-to-point mesh tunnels with smart roaming, and executes fleet operations through strict capability gating (<code>wireguard</code>, <code>configure_ldap</code>, <code>service_control</code>, <code>reboot</code>—strictly refusing arbitrary bash execution).
+            </p>
+            <div class="chronicle-quote">
+              "No third-party coordination relays, no SaaS subscription fees. Your private identity provider, your sovereign WireGuard mesh, your keys."
+            </div>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/theta42/theta-agent.git &amp;&amp; cd theta-agent &amp;&amp; go build</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-agent.git">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-agent ↗</a>
+            <a href="https://github.com/theta42/theta-agent-tray" target="_blank" rel="noopener" class="link-tag">theta-agent-tray ↗</a>
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">Theta Directory ↗</a>
           </div>
         </article>
 
@@ -508,6 +583,58 @@
           </div>
         </div>
 
+        <!-- Turing Multi-GPU LLM Server -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">AI & Hardware</span>
+              <span class="project-stars">32GB VRAM Cluster</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener">Turing Multi-GPU LLM Server</a>
+            </h4>
+            <p class="project-desc">
+              Repurposed 32GB GDDR6 Turing cluster (RTX 2060 12GB + 2x CMP 50HX 10GB) inside an HPE DL380p Gen8. Custom MSI VBIOS mods slashing idle power to ~33W, CUDA 12 NCCL tensor parallelism (500 tok/s prefill), and dynamic reasoning gateway (<code>ollama-proxy.py</code>).
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>git clone turing-multi-gpu-llm-server</span>
+              <button class="copy-btn" data-copy="git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+              <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#benchmarks" target="_blank" rel="noopener" class="link-tag">Benchmarks ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theta Agent -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Networking & Security</span>
+              <span class="project-stars">WireGuard Mesh</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener">Theta Agent &amp; Tray</a>
+            </h4>
+            <p class="project-desc">
+              Cross-platform Go daemon and desktop system tray companion for zero-touch Theta Directory enrollment. Auto-generates WireGuard keypairs, manages dynamic peer routing with smart auto-roaming, and enforces strict capability gating without arbitrary shell access.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>git clone theta-agent</span>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-agent.git">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener" class="link-tag">Agent Daemon ↗</a>
+              <a href="https://github.com/theta42/theta-agent-tray" target="_blank" rel="noopener" class="link-tag">Tray App ↗</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Codeland -->
         <div class="project-card">
           <div class="project-top">
@@ -655,6 +782,80 @@
             <div class="project-actions">
               <a href="https://www.npmjs.com/package/jq-repeat" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
               <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- P2PSub -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">P2P Networking</span>
+              <span class="project-stars">Zero-Dependency</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/wmantly/p2psub" target="_blank" rel="noopener">p2psub</a>
+            </h4>
+            <p class="project-desc">
+              Decentralized peer-to-peer JSON Pub/Sub in Node.js with zero external dependencies. Automatic peer discovery and reconnection, heartbeat gossip, RegExp pattern-based topic subscriptions, and resilient distributed messaging without central brokers.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i p2psub</span>
+              <button class="copy-btn" data-copy="npm install p2psub">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wmantly/p2psub" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+              <a href="https://www.npmjs.com/package/p2psub" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- sudoers-add -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Sysadmin &amp; DevOps</span>
+              <span class="project-stars">Safe Visudo Tool</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/wmantly/sudoers-add" target="_blank" rel="noopener">sudoers-add</a>
+            </h4>
+            <p class="project-desc">
+              Programmatic, safe sudoers rule management for Linux automated setups. Validates syntax strictly using <code>visudo -cf</code> against a sandboxed buffer before atomically installing rules into <code>/etc/sudoers.d/</code>, preventing administrative lockouts.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i -g sudoers-add</span>
+              <button class="copy-btn" data-copy="npm install -g sudoers-add">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/wmantly/sudoers-add" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+              <a href="https://www.npmjs.com/package/sudoers-add" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent Skills & MCP Sidecars -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Autonomous AI</span>
+              <span class="project-stars">Skills &amp; Sidecars</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/wmantly" target="_blank" rel="noopener">Agent Skills &amp; MCP Sidecars</a>
+            </h4>
+            <p class="project-desc">
+              A collection of production skills and Model Context Protocol (MCP) integrations for autonomous agents: <code>tasmota-skill</code> (IoT energy monitoring &amp; relay control), <code>porkbun-skill</code> (DNS automation), <code>minecraft-monitor-skill</code> (RCON telemetry), and <code>openclaw-rag-skill</code>.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-actions">
+              <a href="https://github.com/wmantly" target="_blank" rel="noopener" class="link-tag">GitHub Profile ↗</a>
+              <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener" class="link-tag">Maki Ecosystem ↗</a>
             </div>
           </div>
         </div>
@@ -807,9 +1008,12 @@
             <ul>
               <li><a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener">Theta Suite</a></li>
               <li><a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">Theta Proxy</a></li>
+              <li><a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener">Turing LLM Cluster</a></li>
               <li><a href="https://github.com/wmantly/maki" target="_blank" rel="noopener">Maki Agent</a></li>
+              <li><a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener">Theta Agent &amp; Mesh</a></li>
               <li><a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">SimpleWorkJS</a></li>
               <li><a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">Codeland</a></li>
+              <li><a href="https://github.com/wmantly/p2psub" target="_blank" rel="noopener">p2psub</a></li>
             </ul>
           </div>
 
