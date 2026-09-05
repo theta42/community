@@ -74,7 +74,7 @@ Our live site features a paginated, filterable timeline of **50 engineering anno
 
 ---
 
-## 💻 Local Development
+## 💻 Local Development & Updating
 
 ```bash
 # Clone the community repository
@@ -85,6 +85,8 @@ cd community
 python3 -m http.server 8080
 # Open http://localhost:8080 in your browser
 ```
+
+For AI agents and developers adding new announcements or repository releases, refer to the step-by-step operating manual in [HOW_TO_UPDATE.md](HOW_TO_UPDATE.md).
 
 ---
 
