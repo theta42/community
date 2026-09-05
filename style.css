@@ -610,6 +610,99 @@ h3.chronicle-title a:hover {
   background: rgba(200, 169, 110, 0.08);
 }
 
+.chronicle-badges-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chronicle-repo {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: rgba(200, 169, 110, 0.06);
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.chronicle-pr-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8ed081;
+  background: rgba(142, 208, 129, 0.08);
+  border: 1px solid rgba(142, 208, 129, 0.25);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* PAGINATION */
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--subtle);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.55rem 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--rule);
+  color: var(--white);
+  background: rgba(200, 169, 110, 0.08);
+}
+
+.pagination-btn.active {
+  background: rgba(200, 169, 110, 0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--border);
+}
+
+.pagination-info {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--subtle);
+  text-transform: uppercase;
+}
+
 /* PROJECTS SHOWCASE GRID */
 .projects-grid {
   display: grid;
@@ -1094,5 +1187,13 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  .pagination-controls {
+    gap: 0.35rem;
+  }
+  .pagination-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.7rem;
+    min-width: 2rem;
   }
 }

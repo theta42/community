@@ -146,33 +146,36 @@
   <section id="chronicle">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow">Engineering Chronicle & Dispatches</div>
-        <h2>Field Notes, Milestones & Lore</h2>
+        <div class="section-eyebrow">Engineering Chronicle & PR Announcements</div>
+        <h2>Repository Milestones, PRs & Lore</h2>
         <p class="section-desc">
-          Real engineering history dating back over a decade. Every tool and system we publish originates from solving real friction without renting software from third-party monopolies.
+          Engineering history from foundational 2014 utilities and the founding of Theta 42, INC in November 2017 to our latest multi-GPU clusters. Walk over our repositories, pull requests, and releases across a decade of sovereign software.
         </p>
       </div>
 
       <!-- Filter Bar -->
       <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Dispatches</button>
-        <button class="filter-btn" data-filter="ai">AI & Systems</button>
+        <button class="filter-btn active" data-filter="all">All Announcements</button>
         <button class="filter-btn" data-filter="infra">Infrastructure</button>
+        <button class="filter-btn" data-filter="ai">AI & Systems</button>
         <button class="filter-btn" data-filter="frameworks">Frameworks & Tools</button>
         <button class="filter-btn" data-filter="community">Community & Lore</button>
       </div>
 
       <!-- Chronicle Stream -->
       <div class="chronicle-stream">
-
-        <!-- 2026: Multi-GPU Turing LLM Cluster -->
+        <!-- 2026-09-02: Hacking 32GB VRAM: The Multi-GPU Turing Cluster on Frugal Hardware -->
         <article class="chronicle-card" data-category="ai">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2026-09</span>
+              <span class="chronicle-date">2026-09-02</span>
               <span class="chronicle-category">AI & Systems</span>
             </div>
-            <span class="chronicle-badge">Hardware Mod & LLM Engine</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/turing-multi-gpu-llm-server</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">32GB VRAM Cluster</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
             <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener">
@@ -180,54 +183,48 @@
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Running local models with 32k+ context shouldn't require renting cloud A100s or spending $10,000 on enterprise accelerators. We engineered a <strong>32GB GDDR6 inference cluster</strong> inside a repurposed HPE ProLiant DL380p Gen8 server by pairing a desktop RTX 2060 12GB with two decommissioned NVIDIA CMP 50HX crypto mining cards (10GB each).
-            </p>
-            <p>
-              Mining silicon famously lacks display outputs and has aggressive power configurations that draw ~240W at idle. Through <strong>custom MSI VBIOS flashing</strong>, hardware strapping, and an aggressive Linux driver P-state governor, we slashed idle power draw down to a near-silent <strong>~33W</strong>.
-            </p>
-            <p>
-              We compiled <code>llama.cpp</code> with CUDA 12 and NCCL tensor parallelism across all three Turing GPUs, achieving <strong>325–500 tok/s prompt prefill speeds</strong>. To complete the stack, we wrote <code>ollama-proxy.py</code>—an intelligent API gateway offering dynamic reasoning/thinking control (switching effortlessly between instantaneous responses with <code>think_budget=0</code> and deep chain-of-thought tokens) compatible with Ollama, OpenAI, and Anthropic tooling.
-            </p>
+            <p>Running local LLMs with 32k+ context shouldn't require renting cloud A100s or spending $10,000 on enterprise accelerators. We engineered a <strong>32GB GDDR6 inference cluster</strong> inside a repurposed HPE ProLiant DL380p Gen8 server by pairing a desktop RTX 2060 12GB with two decommissioned NVIDIA CMP 50HX crypto mining cards (10GB each).</p>
+            <p>Mining silicon famously lacks display outputs and has aggressive power configurations drawing ~240W at idle. Through <strong>custom MSI VBIOS flashing</strong>, hardware strapping, and an aggressive Linux driver P-state governor, we slashed idle power draw down to a near-silent <strong>~33W</strong>.</p>
+            <p>We compiled <code>llama.cpp</code> with CUDA 12 and NCCL tensor parallelism across all three Turing GPUs, achieving <strong>325–500 tok/s prompt prefill speeds</strong>. To complete the stack, we wrote <code>ollama-proxy.py</code>—an intelligent API gateway offering dynamic reasoning/thinking control (<code>think_budget=0</code> fast chat vs full dynamic chain-of-thought) compatible with Ollama, OpenAI, and Anthropic tooling.</p>
             <div class="chronicle-quote">
               "Enterprise inference performance on repurposed mining silicon for under $300. The sweet spot where hardware hacking meets autonomous AI."
             </div>
             <div class="chronicle-code">
-              <code>git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git &amp;&amp; cd turing-multi-gpu-llm-server</code>
+              <code>git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git</code>
               <button class="copy-btn" data-copy="git clone https://github.com/wmantly/turing-multi-gpu-llm-server.git">Copy</button>
             </div>
           </div>
           <div class="chronicle-links">
             <a href="https://github.com/wmantly/turing-multi-gpu-llm-server" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/turing-multi-gpu-llm-server ↗</a>
-            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#power-states--tuning" target="_blank" rel="noopener" class="link-tag">Power &amp; VBIOS Guide ↗</a>
-            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#ollama-proxy" target="_blank" rel="noopener" class="link-tag">Ollama Proxy ↗</a>
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#power-states--tuning" target="_blank" rel="noopener" class="link-tag">Power & VBIOS Tuning ↗</a>
+            <a href="https://github.com/wmantly/turing-multi-gpu-llm-server#ollama-proxy" target="_blank" rel="noopener" class="link-tag">Ollama Proxy Gateway ↗</a>
           </div>
         </article>
 
-        <!-- 2026: Maki Remote Control & Web UI -->
+        <!-- 2026-09-01: Maki Agent: Remote Orchestration Tunnel & Local Web UI Control Plane -->
         <article class="chronicle-card" data-category="ai">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2026-09</span>
+              <span class="chronicle-date">2026-09-01</span>
               <span class="chronicle-category">AI & Systems</span>
             </div>
-            <span class="chronicle-badge">Latest Release</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/maki</span>
+              <span class="chronicle-pr-tag">Feature Release</span>
+              <span class="chronicle-badge">Autonomous Agent</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
             <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener">
-              Maki: Remote Control & Web UI for Native AI Coding Agents
+              Maki Agent: Remote Orchestration Tunnel & Local Web UI Control Plane
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              AI coding assistants shouldn't require bloated, memory-hungry Electron wrappers that trap your codebase in closed clouds. Maki is a native, lightning-fast Rust-based AI agent extendable via Neovim-style Lua plugins and the Agent Client Protocol (ACP) for modern editors like Zed.
-            </p>
-            <p>
-              We expanded Maki with <strong>full remote control capabilities and a dedicated Web UI</strong> to monitor, prompt, and manage autonomous coding sessions from any browser on the local network or Tailnet. We eliminated latent race conditions in async control tunnels so commands execute synchronously without synthetic pauses, hooked dynamic provider scripts into <code>~/.config/maki/providers/</code>, and optimized local model routing.
-            </p>
+            <p>AI coding assistants shouldn't require bloated, memory-hungry Electron wrappers that trap your codebase in closed clouds. Maki is a native, lightning-fast Rust-based AI agent extendable via Neovim-style Lua plugins and the Agent Client Protocol (ACP) for modern editors like Zed.</p>
+            <p>We expanded Maki with <strong>full remote control capabilities and a dedicated Web UI</strong> to monitor, prompt, and manage autonomous coding sessions from any browser on the local network or Tailnet. We eliminated latent race conditions in async control tunnels so commands execute synchronously without synthetic pauses, hooked dynamic provider scripts into <code>~/.config/maki/providers/</code>, and optimized local model routing.</p>
             <div class="chronicle-quote">
               "Why rent a closed SaaS agent when you can run a native Rust engine directly on your hardware, hack it with Lua, and orchestrate it remotely from a clean Web UI?"
-              <span class="chronicle-quote-author">— <a href="https://william.mantly.vip/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">William Mantly</a></span>
+              <span class="chronicle-quote-author">— William Mantly</span>
             </div>
             <div class="chronicle-code">
               <code>curl -fsSL https://maki.sh/install.sh | sh</code>
@@ -241,177 +238,466 @@
           </div>
         </article>
 
-        <!-- 2026: Theta Suite v1.5.0 & UI Unification -->
+        <!-- 2026-08-18: Release v3.21.2: Live LDAP Replication Convergence, Join Validation & Local Discovery -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2026-07</span>
+              <span class="chronicle-date">2026-08-18</span>
               <span class="chronicle-category">Infrastructure</span>
             </div>
-            <span class="chronicle-badge">Unified Milestone</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-suite</span>
+              <span class="chronicle-pr-tag">PR #262 Merged</span>
+              <span class="chronicle-badge">Release v3.21.2</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener">
-              The Sovereign Stack: Theta Suite v1.5.0 & Complete UI Unification
+            <a href="https://github.com/theta42/theta-suite/releases" target="_blank" rel="noopener">
+              Release v3.21.2: Live LDAP Replication Convergence, Join Validation & Local Discovery
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Setting up enterprise-grade identity, access, and secrets in a home lab or small enterprise used to mean wrestling with Okta bills or Keycloak's overwhelming resource footprint. <strong>Theta Suite</strong> (formerly <code>theta-env</code>) bundles an OIDC/LDAP identity provider, an OIDC-aware reverse proxy, an inventory-driven SSH jump host, and Linux host enrollment into a single <code>./setup.sh</code> Docker Compose stack.
-            </p>
-            <p>
-              In v1.5.0, we completed full UI unification across all three core apps (Proxy v1.4.0, Theta Directory v1.5.0, and Jump Host v1.3.0). Every app now shares a byte-identical shell, unified client-side group gating, cached OIDC auth promises, and automated inventory graphing for Proxmox VMs, UniFi clients, and Docker containers—all reading from a shared OpenBao secrets store.
-            </p>
-            <div class="chronicle-quote">
-              "Enterprise SSO without the enterprise. Keycloak and Authentik make you bring your own directory; Theta Suite ships one out of the box."
-            </div>
+            <p>Theta Suite v3.21.2 solidifies our multi-site deployment tier. When running decentralized edge nodes across disparate physical sites or homelabs, OpenLDAP syncrepl replication must converge reliably without manual intervention.</p>
+            <p>This release introduces live LDAP replication convergence monitoring, automated site join preflight validation, and a runtime toggle for mDNS local discovery—allowing fresh nodes to bootstrap without relying on public DNS or central SaaS brokers.</p>
             <div class="chronicle-code">
-              <code>git clone https://github.com/theta42/theta-suite.git &amp;&amp; cd theta-suite &amp;&amp; ./setup.sh</code>
+              <code>git clone https://github.com/theta42/theta-suite.git && cd theta-suite && ./setup.sh</code>
               <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-suite.git && cd theta-suite && ./setup.sh">Copy</button>
             </div>
           </div>
           <div class="chronicle-links">
-            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener" class="link-tag">Suite Docs ↗</a>
-            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">theta-suite ↗</a>
-            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">theta-directory ↗</a>
-            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">jump-host ↗</a>
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-suite ↗</a>
+            <a href="https://github.com/theta42/theta-suite/releases" target="_blank" rel="noopener" class="link-tag">Release Notes ↗</a>
+            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener" class="link-tag">Suite Documentation ↗</a>
           </div>
         </article>
 
-        <!-- 2026: Theta Agent & Zero-Touch Mesh VPN -->
+        <!-- 2026-08-18: Release v2.24.2: Real-Time LDAP Directory Replication & Join Guard Hardening -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2026-06</span>
+              <span class="chronicle-date">2026-08-18</span>
               <span class="chronicle-category">Infrastructure</span>
             </div>
-            <span class="chronicle-badge">Zero-Touch Mesh</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-directory</span>
+              <span class="chronicle-pr-tag">PR #245 Merged</span>
+              <span class="chronicle-badge">Release v2.24.2</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener">
-              Theta Agent: Zero-Touch WireGuard Mesh &amp; Fleet Directory Enrollment
+            <a href="https://github.com/theta42/theta-directory/releases" target="_blank" rel="noopener">
+              Release v2.24.2: Real-Time LDAP Directory Replication & Join Guard Hardening
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Onboarding remote Linux hosts, edge gateways, and developer laptops into a secure private network usually involves distributing static WireGuard configurations, setting up central relay bottlenecks, or paying monthly per-device subscriptions to proprietary mesh overlay providers.
-            </p>
-            <p>
-              <strong>Theta Agent</strong> is a lightweight, cross-platform Go daemon accompanied by a desktop system tray companion (<code>theta-agent-tray</code>). It automatically authenticates and enrolls endpoints directly into Theta Directory. The agent auto-generates WireGuard keypairs, establishes direct point-to-point mesh tunnels with smart roaming, and executes fleet operations through strict capability gating (<code>wireguard</code>, <code>configure_ldap</code>, <code>service_control</code>, <code>reboot</code>—strictly refusing arbitrary bash execution).
-            </p>
-            <div class="chronicle-quote">
-              "No third-party coordination relays, no SaaS subscription fees. Your private identity provider, your sovereign WireGuard mesh, your keys."
+            <p>Theta Directory v2.24.2 resolves subtle synchronization race conditions in hub-and-spoke topologies. Spoke instances now verify replication status directly against the primary hub before executing write actions.</p>
+            <p>Features token cache TTL optimizations, fail-soft join guards for spoke node onboarding, and real-time replication health badges on the admin status dashboard.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-directory ↗</a>
+            <a href="https://github.com/theta42/theta-directory/releases" target="_blank" rel="noopener" class="link-tag">Directory Releases ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-18: Release v3.3.4: Hardened Mesh Service Routing & Dynamic WireGuard Endpoints -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-18</span>
+              <span class="chronicle-category">Infrastructure</span>
             </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/jump-host</span>
+              <span class="chronicle-pr-tag">PR #61 Merged</span>
+              <span class="chronicle-badge">Release v3.3.4</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/jump-host/releases" target="_blank" rel="noopener">
+              Release v3.3.4: Hardened Mesh Service Routing & Dynamic WireGuard Endpoints
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Jump Host v3.3.4 sets <code>THETA_MESH_ENDPOINT</code> by default across automated host installation scripts, resolving edge cases where remote nodes roamed across multi-homed interfaces.</p>
+            <p>Eliminates transient route flapping when bringing WireGuard mesh tunnels down during configuration changes, and finalizes unified shell navigation across the entire suite.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/jump-host ↗</a>
+            <a href="https://github.com/theta42/jump-host/releases" target="_blank" rel="noopener" class="link-tag">Jump Host Releases ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-18: Release v2.8.2: mDNS Local Discovery Configuration Toggle & Hosts Override -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-18</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-agent</span>
+              <span class="chronicle-pr-tag">PR #26 Merged</span>
+              <span class="chronicle-badge">Release v2.8.2</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-agent/releases" target="_blank" rel="noopener">
+              Release v2.8.2: mDNS Local Discovery Configuration Toggle & Hosts Override
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Theta Agent v2.8.2 adds a configuration toggle for LAN mDNS discovery and conditional local <code>/etc/hosts</code> overrides.</p>
+            <p>This enables edge appliances and development laptops to discover local Theta Directory instances on air-gapped subnets without configuring external split-brain DNS servers.</p>
             <div class="chronicle-code">
-              <code>git clone https://github.com/theta42/theta-agent.git &amp;&amp; cd theta-agent &amp;&amp; go build</code>
-              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-agent.git">Copy</button>
+              <code>theta-agent discover --site office-lab</code>
+              <button class="copy-btn" data-copy="theta-agent discover --site office-lab">Copy</button>
             </div>
           </div>
           <div class="chronicle-links">
             <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-agent ↗</a>
             <a href="https://github.com/theta42/theta-agent-tray" target="_blank" rel="noopener" class="link-tag">theta-agent-tray ↗</a>
-            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">Theta Directory ↗</a>
           </div>
         </article>
 
-        <!-- 2025: CoreJourney & #SaveCJ -->
-        <article class="chronicle-card" data-category="community">
-          <div class="chronicle-meta">
-            <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2025–2026</span>
-              <span class="chronicle-category">Community & Lore</span>
-            </div>
-            <span class="chronicle-badge">Community Preserved</span>
-          </div>
-          <h3 class="chronicle-title">
-            <a href="https://corejourney.org" target="_blank" rel="noopener">
-              The Rebirth of CoreJourney: Rescuing 5 Years of History (#SaveCJ)
-            </a>
-          </h3>
-          <div class="chronicle-body">
-            <p>
-              In February 2025, after 5 years of continuous hardcore survival, the original creator of CoreJourney announced the server would permanently shut down on its 5th anniversary due to lack of time and hosting funds. For thousands of players who had built monuments, fought clan wars, and endured real death bans, a digital universe was about to vanish.
-            </p>
-            <p>
-              William (known in-game as <code>tux4242</code> / <code>wmantly</code> / <code>useless666</code>), a 5-year veteran player, posted the <strong>#SaveCJ</strong> pledge to take the torch. The transfer was agreed upon: <strong>1.5 TB of raw Minecraft world history</strong> was transferred over a 10GbE fiber link directly to enterprise HPE DL380 servers in his homelab.
-            </p>
-            <p>
-              Through the community "CDD" (CoreJourney Disk Drive) fundraiser, players pooled together to buy Crucial MX500 SSDs for redundant ZFS mirrors. William modernized the stack through versions 1.20, 1.21.4, 1.21.10, and 26.1.2 ("Spring to Life"). He engineered a custom SQLite WAL live statistics platform (<a href="https://corejourney.org" target="_blank" rel="noopener">corejourney.org</a>) tracking PvP kills, rivalries, death bans, and player lifespans, alongside a community lore wiki (<a href="https://wiki.corejourney.org" target="_blank" rel="noopener">wiki.corejourney.org</a>).
-            </p>
-            <div class="chronicle-quote">
-              "Technically, CJ is now run and operated by Theta 42? But I'm Theta 42 and Theta 42 is me... We don't do pay-to-win. You donate $5 and get a Golden Dandelion or a copper pickaxe; 100% of the funds keep the hardware running and pay the electric bill."
-              <span class="chronicle-quote-author">— #SaveCJ Announcement</span>
-            </div>
-            <div class="chronicle-code">
-              <code>Server Address: corejourney.org (Hardcore Survival, PvP &amp; Leaderboards)</code>
-              <button class="copy-btn" data-copy="corejourney.org">Copy IP</button>
-            </div>
-          </div>
-          <div class="chronicle-links">
-            <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">Live Server Stats ↗</a>
-            <a href="https://wiki.corejourney.org" target="_blank" rel="noopener" class="link-tag">Community Wiki ↗</a>
-            <a href="https://www.reddit.com/r/corejourney/comments/1iwcb8o/savecj/" target="_blank" rel="noopener" class="link-tag">Reddit #SaveCJ ↗</a>
-            <a href="#donate" class="link-tag">Donate to Server ↗</a>
-          </div>
-        </article>
-
-        <!-- 2025: The Proxy -->
+        <!-- 2026-08-17: PR #254: Pragmatic Hub-and-Spoke Architecture & Multi-Site Secret Sync -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2025-01</span>
+              <span class="chronicle-date">2026-08-17</span>
               <span class="chronicle-category">Infrastructure</span>
             </div>
-            <span class="chronicle-badge">Core Engine</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-suite</span>
+              <span class="chronicle-pr-tag">PR #254 Merged</span>
+              <span class="chronicle-badge">Release v3.20.0</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">
-              The Proxy: Dynamic Zero-Reload Ingress with Native Directory SSO
+            <a href="https://github.com/theta42/theta-suite/pull/254" target="_blank" rel="noopener">
+              PR #254: Pragmatic Hub-and-Spoke Architecture & Multi-Site Secret Sync
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Most reverse proxies treat authentication as an afterthought or force you into clunky third-party middleware plugins with static configuration files. We built <strong>Theta Proxy</strong> to put any backend service behind single sign-on with zero reload downtime.
-            </p>
-            <p>
-              Built on OpenResty with Lua-based edge routing and a Node.js management API, it interfaces with Redis via our custom <code>model-redis</code> ORM. It automatically handles Let's Encrypt wildcard certificates via DNS-01 challenges (supporting Porkbun, Cloudflare, DigitalOcean, and DuckDNS). Crucially, it speaks both OIDC and OpenLDAP directly, allowing access decisions to be evaluated against real user directory groups in real time.
-            </p>
-            <div class="chronicle-quote">
-              "Per-host rate limiting, response caching, HSTS, round-robin load balancing, and self-service API tokens for automation—all without restarting Nginx."
-            </div>
-            <div class="chronicle-code">
-              <code>git clone https://github.com/theta42/proxy.git &amp;&amp; cd proxy &amp;&amp; sudo ./ops/install.sh</code>
-              <button class="copy-btn" data-copy="git clone https://github.com/theta42/proxy.git && cd proxy && sudo ./ops/install.sh">Copy</button>
-            </div>
+            <p>Merging PR #254 introduced native multi-site topology support to Theta Suite without the complexity of distributed consensus protocols.</p>
+            <p>Spoke instances handle local reads and ingress authentication at the edge while proxying mutation calls directly to the central hub. OpenBao secrets and TLS certificates synchronize automatically across all spoke locations over encrypted WireGuard backplanes.</p>
           </div>
           <div class="chronicle-links">
-            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/proxy ↗</a>
-            <a href="https://theta42.github.io/proxy/" target="_blank" rel="noopener" class="link-tag">Proxy Docs ↗</a>
-            <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener" class="link-tag">NPM: model-redis ↗</a>
+            <a href="https://github.com/theta42/theta-suite/pull/254" target="_blank" rel="noopener" class="link-tag">GitHub PR #254 ↗</a>
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">theta-suite ↗</a>
           </div>
         </article>
 
-        <!-- 2024: SimpleWorkJS -->
-        <article class="chronicle-card" data-category="frameworks">
+        <!-- 2026-08-14: PR #234: Interactive Notification Controls, Live Toasts & Profile Subsystem -->
+        <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2024-05</span>
-              <span class="chronicle-category">Frameworks & Tools</span>
+              <span class="chronicle-date">2026-08-14</span>
+              <span class="chronicle-category">Infrastructure</span>
             </div>
-            <span class="chronicle-badge">Zero-Bloat Stack</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #234 Merged</span>
+              <span class="chronicle-badge">Release v2.4.2</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">
-              SimpleWorkJS: Stripping the Bloat from Modern Node.js
+            <a href="https://github.com/theta42/proxy/pull/234" target="_blank" rel="noopener">
+              PR #234: Interactive Notification Controls, Live Toasts & Profile Subsystem
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Why do modern web application backends require 50 configuration files, complex decorator DSLs, and thousands of transitive dependencies? SimpleWorkJS is a minimalist toolkit designed for developers who want simplicity and speed:
-            </p>
-            <p>
-              <code>@simpleworkjs/conf</code> offers hierarchical config management in one require: drop a <code>conf/</code> directory with <code>base.js</code>, per-environment overrides, and a gitignored <code>secrets.js</code>, deep-merging by <code>NODE_ENV</code> with one dependency. Paired with <code>@simpleworkjs/orm-identity</code>, <code>@simpleworkjs/backend</code>, and <code>@simpleworkjs/bao-conf</code> (Vault KV-v2 integration), it powers fast, robust distributed apps.
-            </p>
+            <p>Shipped real-time notification toasts and an interactive notification center bell directly inside Theta Proxy's web interface.</p>
+            <p>Admins and operators receive live UI alerts whenever new wildcard SSL certificates are issued, DNS API challenge credentials rotate, or backend route status changes occur—backed by Redis pub/sub WebSocket channels.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/234" target="_blank" rel="noopener" class="link-tag">GitHub PR #234 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-13: PR #25: Automated Azure Trusted Signing for Windows Fleet Binaries -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-13</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-agent</span>
+              <span class="chronicle-pr-tag">PR #25 Merged</span>
+              <span class="chronicle-badge">Release v2.8.1</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-agent/pull/25" target="_blank" rel="noopener">
+              PR #25: Automated Azure Trusted Signing for Windows Fleet Binaries
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Distributing sovereign endpoint software to enterprise Windows desktops often triggers annoying SmartScreen security warnings unless binaries are cryptographically signed with trusted EV certificates.</p>
+            <p>PR #25 integrated Microsoft Azure Trusted Signing directly into the Go cross-compilation pipeline. Windows binaries and system tray packages are signed automatically upon GitHub release creation, enabling one-click installation across corporate Windows fleets.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-agent/pull/25" target="_blank" rel="noopener" class="link-tag">GitHub PR #25 ↗</a>
+            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener" class="link-tag">theta42/theta-agent ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-13: PR #236: HP iLO Out-of-Band Discovery & Bare-Metal BMC Power Control -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-13</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-directory</span>
+              <span class="chronicle-pr-tag">PR #236 Merged</span>
+              <span class="chronicle-badge">Hardware Telemetry</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-directory/pull/236" target="_blank" rel="noopener">
+              PR #236: HP iLO Out-of-Band Discovery & Bare-Metal BMC Power Control
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Expanded Theta Directory's hardware inventory engine with native support for Hewlett Packard Enterprise Integrated Lights-Out (HP iLO) management processors.</p>
+            <p>Theta Directory discovers iLO BMC controllers across LAN subnets, extracts server chassis serials, power metrics, and thermal sensor readings, and allows authorized administrators to execute hardware resets and power cycling directly from the Directory UI.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-directory/pull/236" target="_blank" rel="noopener" class="link-tag">GitHub PR #236 ↗</a>
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">theta42/theta-directory ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-12: PR #218: Live Real-Time Socket Updates & Per-Socket Event Authorization -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-12</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #218 Merged</span>
+              <span class="chronicle-badge">Release v2.1.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/218" target="_blank" rel="noopener">
+              PR #218: Live Real-Time Socket Updates & Per-Socket Event Authorization
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Replaced periodic frontend polling with a high-speed, bidirectional WebSocket event bus. Every route alteration, DNS challenge state, and host toggle immediately triggers targeted model events in connected browser sessions.</p>
+            <p>Introduced granular per-socket event authorization, ensuring operators only receive updates for hosts and domains they have explicit permission to view.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/218" target="_blank" rel="noopener" class="link-tag">GitHub PR #218 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-11: PR #46 & #47: WireGuard Mesh Service Forwarding & Host-Level Routing Gateway -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-11</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/jump-host</span>
+              <span class="chronicle-pr-tag">PR #46 & #47 Merged</span>
+              <span class="chronicle-badge">Release v2.2.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/jump-host/pull/46" target="_blank" rel="noopener">
+              PR #46 & #47: WireGuard Mesh Service Forwarding & Host-Level Routing Gateway
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>A major architectural evolution: migrated Jump Host's routing plane out of containerized Docker bridges directly into host-level Linux network namespaces.</p>
+            <p>Transformed Jump Host into a high-performance roster-driven WireGuard router capable of line-rate mesh packet forwarding and dedicated per-device internet egress rules.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/jump-host/pull/46" target="_blank" rel="noopener" class="link-tag">GitHub PR #46 ↗</a>
+            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">theta42/jump-host ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-02: Project Genesis: Cross-Platform Sovereign Fleet Agent & WireGuard Mesh -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-02</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-agent</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Zero-Touch Fleet</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener">
+              Project Genesis: Cross-Platform Sovereign Fleet Agent & WireGuard Mesh
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Initial commit of <code>theta42/theta-agent</code>. We set out to replace complex configuration management scripts with a single cross-platform Go binary that connects sovereign machines to Theta Directory.</p>
+            <p>The agent automatically generates WireGuard keypairs, establishes encrypted point-to-point tunnels, and listens for gated fleet actions (<code>wireguard</code>, <code>configure_ldap</code>, <code>service_control</code>, <code>reboot</code>) while strictly prohibiting arbitrary remote shell execution.</p>
+            <div class="chronicle-code">
+              <code>curl -fsSL https://theta42.com/install-agent.sh | sudo sh</code>
+              <button class="copy-btn" data-copy="curl -fsSL https://theta42.com/install-agent.sh | sudo sh">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-agent" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-agent ↗</a>
+            <a href="https://github.com/theta42/theta-agent#security-model" target="_blank" rel="noopener" class="link-tag">Security Model ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-02: PR #200: OpenBao Secrets Integration for Zero-Cleartext DNS API Credentials -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-02</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #200 Merged</span>
+              <span class="chronicle-badge">Release v1.14.0</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/200" target="_blank" rel="noopener">
+              PR #200: OpenBao Secrets Integration for Zero-Cleartext DNS API Credentials
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Storing DNS provider API tokens in Redis or local environment files is a significant security risk if an edge container is ever compromised.</p>
+            <p>PR #200 moved all DNS API keys (Cloudflare, Porkbun, DigitalOcean, DuckDNS) into OpenBao (open-source HashiCorp Vault fork) KV-v2 secret storage. Credentials are retrieved ephemerally during DNS-01 ACME challenges and never touch persistent disk.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/200" target="_blank" rel="noopener" class="link-tag">GitHub PR #200 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-08-01: Release v1.0.0: @simpleworkjs/bao-conf Vault KV-v2 Configuration Provider -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-08-01</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">simpleworkjs/bao-conf</span>
+              <span class="chronicle-pr-tag">Initial Release</span>
+              <span class="chronicle-badge">Vault Integration</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/simpleworkjs/bao-conf" target="_blank" rel="noopener">
+              Release v1.0.0: @simpleworkjs/bao-conf Vault KV-v2 Configuration Provider
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Released <code>@simpleworkjs/bao-conf</code>, a lightweight OpenBao and HashiCorp Vault configuration provider for modern Node.js backends.</p>
+            <p>Seamlessly plugs into <code>@simpleworkjs/conf</code> to fetch secret trees at application startup with automated token renewal and fail-soft development fallbacks.</p>
+            <div class="chronicle-code">
+              <code>npm install @simpleworkjs/bao-conf @simpleworkjs/conf</code>
+              <button class="copy-btn" data-copy="npm install @simpleworkjs/bao-conf @simpleworkjs/conf">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/simpleworkjs/bao-conf" target="_blank" rel="noopener" class="link-tag">GitHub: simpleworkjs/bao-conf ↗</a>
+            <a href="https://www.npmjs.com/package/@simpleworkjs/bao-conf" target="_blank" rel="noopener" class="link-tag">NPM: @simpleworkjs/bao-conf ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-26: Milestone: Complete UI Unification Across Theta Suite Apps -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-26</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-suite</span>
+              <span class="chronicle-pr-tag">Architecture Milestone</span>
+              <span class="chronicle-badge">UI Unification</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener">
+              Milestone: Complete UI Unification Across Theta Suite Apps
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Completed full UI unification across all three core applications: Theta Proxy v1.4.0, Theta Directory v1.5.0, and Jump Host v1.3.0.</p>
+            <p>Every application now shares a byte-identical design shell, unified client-side group gating, cached OIDC authentication promises, and standardized navigation across dark obsidian and warm gold design tokens.</p>
+            <div class="chronicle-quote">
+              "Enterprise SSO without the enterprise. Keycloak and Authentik make you bring your own directory; Theta Suite ships one out of the box."
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener" class="link-tag">Suite Documentation ↗</a>
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">theta42/theta-suite ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-23: Project Genesis: SSH Jump Host with Dynamic Homelab Inventory Graphing -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-23</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/jump-host</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Bastion Edge</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener">
+              Project Genesis: SSH Jump Host with Dynamic Homelab Inventory Graphing
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>First commit of <code>theta42/jump-host</code>: an intelligent SSH bastion and jump host designed specifically for homelabs and sovereign infrastructure.</p>
+            <p>Automatically polls UniFi network controllers, Proxmox VE hypervisors, and Docker sockets to present an inventory graph of every online host, enabling point-and-click SSH terminal access behind directory single sign-on.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/jump-host ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-20: SimpleWorkJS Ecosystem Expansion: @simpleworkjs/orm, backend, & frontend -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-20</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">simpleworkjs</span>
+              <span class="chronicle-pr-tag">Major Rollout</span>
+              <span class="chronicle-badge">Zero-DSL Node</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">
+              SimpleWorkJS Ecosystem Expansion: @simpleworkjs/orm, backend, & frontend
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Rolled out the full suite of SimpleWorkJS packages: <code>@simpleworkjs/orm</code>, <code>@simpleworkjs/orm-identity</code>, <code>@simpleworkjs/backend</code>, and <code>@simpleworkjs/frontend</code>.</p>
+            <p>Designed to strip the bloat from modern Node.js web services, offering lightweight schema modeling, session handling, and clean RESTful API construction without thousands of transitive dependencies.</p>
             <div class="chronicle-code">
               <code>npm install @simpleworkjs/conf @simpleworkjs/backend @simpleworkjs/orm-identity</code>
               <button class="copy-btn" data-copy="npm install @simpleworkjs/conf @simpleworkjs/backend @simpleworkjs/orm-identity">Copy</button>
@@ -420,31 +706,297 @@
           <div class="chronicle-links">
             <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener" class="link-tag">GitHub: @simpleworkjs ↗</a>
             <a href="https://simpleworkjs.github.io/conf/" target="_blank" rel="noopener" class="link-tag">Conf Docs ↗</a>
-            <a href="https://www.npmjs.com/package/@simpleworkjs/conf" target="_blank" rel="noopener" class="link-tag">NPM: @simpleworkjs/conf ↗</a>
           </div>
         </article>
 
-        <!-- 2021: Codeland Ecosystem -->
+        <!-- 2026-07-11: Project Genesis: One-Command Self-Hosted Identity & Proxy Stack -->
         <article class="chronicle-card" data-category="infra">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2021-08</span>
+              <span class="chronicle-date">2026-07-11</span>
               <span class="chronicle-category">Infrastructure</span>
             </div>
-            <span class="chronicle-badge">Pioneer Architecture</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-suite</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">One-Command Stack</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">
-              Codeland: Self-Hosted Serverless Containers on Frugal Hardware
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener">
+              Project Genesis: One-Command Self-Hosted Identity & Proxy Stack
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Long before modern browser-based execution platforms like Replit were properly established, we engineered <strong>Codeland</strong>: a self-hosted serverless code execution platform supporting 24 programming languages inside genuine isolated Linux containers (LXC).
-            </p>
-            <p>
-              The <code>codeland-ecosystem</code> featured a sophisticated control plane: pre-warmed container pools for instant sub-second cold starts, interactive WebSocket terminals, auto-scaling worker nodes, and instant public URLs—all running smoothly on a frugal $40/month infrastructure footprint.
-            </p>
+            <p>First commit of <code>theta-env</code> (later renamed <code>theta-suite</code>). The goal: bundle an OIDC/LDAP identity provider, dynamic ingress reverse proxy, and Linux enrollment into a single <code>./setup.sh</code> Docker Compose environment.</p>
+            <p>Proved that full digital sovereignty and enterprise-grade single sign-on can be provisioned on bare metal in under 5 minutes.</p>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/theta42/theta-suite.git && cd theta-suite && ./setup.sh</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-suite.git && cd theta-suite && ./setup.sh">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-suite ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-07-11: PR #57: Per-Host Single Sign-On via OpenResty Edge Gate -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07-11</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #57 Merged</span>
+              <span class="chronicle-badge">Edge SSO Gate</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/57" target="_blank" rel="noopener">
+              PR #57: Per-Host Single Sign-On via OpenResty Edge Gate
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged native per-host authentication into Theta Proxy using Lua at the OpenResty edge.</p>
+            <p>Any internal HTTP application—regardless of language or whether it has built-in auth—can now be gated behind Theta Directory single sign-on with group access control in one toggle.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/57" target="_blank" rel="noopener" class="link-tag">GitHub PR #57 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026-02-14: Release: Autonomous Agent Skills (Tasmota, Porkbun, Minecraft & OpenClaw RAG) -->
+        <article class="chronicle-card" data-category="ai">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-02-14</span>
+              <span class="chronicle-category">AI & Systems</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly</span>
+              <span class="chronicle-pr-tag">Ecosystem Release</span>
+              <span class="chronicle-badge">MCP Sidecars</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly" target="_blank" rel="noopener">
+              Release: Autonomous Agent Skills (Tasmota, Porkbun, Minecraft & OpenClaw RAG)
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Deployed production toolkits for autonomous AI coding agents using the Model Context Protocol (MCP) and custom skill runtimes.</p>
+            <p>Included <code>tasmota-skill</code> for IoT energy monitoring and relay control, <code>porkbun-skill</code> for programmatic DNS zone automation, <code>minecraft-monitor-skill</code> for real-time RCON server health, and <code>openclaw-rag-skill</code> for local codebase knowledge retrieval.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025-12-31: PR #86 & #87: Migration to @simpleworkjs/conf and model-redis ORM -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-12-31</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #86 & #87 Merged</span>
+              <span class="chronicle-badge">Architecture Refactor</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/86" target="_blank" rel="noopener">
+              PR #86 & #87: Migration to @simpleworkjs/conf and model-redis ORM
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Refactored Theta Proxy's internals to use our standardized open-source primitives. Replaced ad-hoc configuration loading with <code>@simpleworkjs/conf</code> (PR #86) and migrated database access to the standalone <code>model-redis</code> ORM package (PR #87).</p>
+            <p>Significantly improved test suite execution speed and enabled seamless CI/CD validation.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/86" target="_blank" rel="noopener" class="link-tag">GitHub PR #86 ↗</a>
+            <a href="https://github.com/theta42/proxy/pull/87" target="_blank" rel="noopener" class="link-tag">GitHub PR #87 ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025-12-26: CoreJourney 26.1.2: The 'Spring to Life' Engine Update & Lore Wiki Launch -->
+        <article class="chronicle-card" data-category="community">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-12-26</span>
+              <span class="chronicle-category">Community & Lore</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">corejourney.org</span>
+              <span class="chronicle-pr-tag">Community Milestone</span>
+              <span class="chronicle-badge">Hardcore Engine</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://corejourney.org" target="_blank" rel="noopener">
+              CoreJourney 26.1.2: The 'Spring to Life' Engine Update & Lore Wiki Launch
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Shipped version 26.1.2 of the CoreJourney world engine, introducing performance optimizations for massive mob farms and clan battles.</p>
+            <p>Deployed the live telemetry web platform (<a href='https://corejourney.org' target='_blank' rel='noopener'>corejourney.org</a>) powered by SQLite WAL mode to track real-time kills, player lifespans, and death bans, alongside the community lore wiki (<a href='https://wiki.corejourney.org' target='_blank' rel='noopener'>wiki.corejourney.org</a>).</p>
+            <div class="chronicle-code">
+              <code>Server Address: corejourney.org (Hardcore Survival & PvP)</code>
+              <button class="copy-btn" data-copy="Server Address: corejourney.org (Hardcore Survival & PvP)">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">Live Server Stats ↗</a>
+            <a href="https://wiki.corejourney.org" target="_blank" rel="noopener" class="link-tag">Community Wiki ↗</a>
+            <a href="https://www.reddit.com/r/corejourney/comments/1tko9aa/2612_and_spring_to_life/" target="_blank" rel="noopener" class="link-tag">Reddit Update ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025-07-12: CoreJourney 1.21.4 Migration & 10GbE ZFS Mirror Migration Completed -->
+        <article class="chronicle-card" data-category="community">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-07-12</span>
+              <span class="chronicle-category">Community & Lore</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">corejourney.org</span>
+              <span class="chronicle-pr-tag">Infrastructure</span>
+              <span class="chronicle-badge">Storage Migration</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://corejourney.org" target="_blank" rel="noopener">
+              CoreJourney 1.21.4 Migration & 10GbE ZFS Mirror Migration Completed
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Completed the world modernization to Minecraft version 1.21.4 without resetting player builds or map history.</p>
+            <p>Migrated 1.5 TB of world chunks to redundant Crucial MX500 SSDs in a dedicated ZFS mirror pool over an internal 10GbE fiber link, eliminating chunk loading lag during peak player activity.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://www.reddit.com/r/corejourney/comments/1ji49b0/and_we_have_1214/" target="_blank" rel="noopener" class="link-tag">Reddit 1.21.4 Update ↗</a>
+            <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">CoreJourney Stats ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025-02-23: #SaveCJ: Rescuing 5 Years of Minecraft World History from Permanent Shutdown -->
+        <article class="chronicle-card" data-category="community">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-02-23</span>
+              <span class="chronicle-category">Community & Lore</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">corejourney.org</span>
+              <span class="chronicle-pr-tag">Community Preservation</span>
+              <span class="chronicle-badge">#SaveCJ Torch</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://www.reddit.com/r/corejourney/comments/1iwcb8o/savecj/" target="_blank" rel="noopener">
+              #SaveCJ: Rescuing 5 Years of Minecraft World History from Permanent Shutdown
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>After 5 years of continuous hardcore survival, the original creator announced the permanent shutdown of CoreJourney on its 5th anniversary. For thousands of players who had built empires and survived real death bans, a world was about to vanish.</p>
+            <p>William Mantly (<code>tux4242</code>) stepped forward with the #SaveCJ pledge to preserve the community. World files were transferred over 10GbE fiber directly to sovereign HPE DL380 enterprise servers in his homelab—with a strict guarantee of 0% pay-to-win.</p>
+            <div class="chronicle-quote">
+              "Technically, CJ is now run and operated by Theta 42? But I'm Theta 42 and Theta 42 is me... 100% of community contributions keep the hardware powered and pay the electric bill."
+              <span class="chronicle-quote-author">— #SaveCJ Announcement</span>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://www.reddit.com/r/corejourney/comments/1iwcb8o/savecj/" target="_blank" rel="noopener" class="link-tag">Reddit #SaveCJ Pledge ↗</a>
+            <a href="https://www.reddit.com/r/corejourney/comments/1iw62nc/im_deeply_sorry_to_inform_you_that_corejourney/" target="_blank" rel="noopener" class="link-tag">Shutdown Notice ↗</a>
+          </div>
+        </article>
+
+        <!-- 2024-08-15: PR #66: Automated Wildcard DNS-01 SSL Lifecycle Engine -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2024-08-15</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #66 Merged</span>
+              <span class="chronicle-badge">DNS Automation</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/66" target="_blank" rel="noopener">
+              PR #66: Automated Wildcard DNS-01 SSL Lifecycle Engine
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged full automated wildcard SSL certificate management using DNS-01 ACME verification.</p>
+            <p>Integrated Cloudflare and DigitalOcean API adapters, dynamic challenge TXT cleanup, and automatic renewal timers into Theta Proxy so wildcard certificates never expire unexpectedly.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/66" target="_blank" rel="noopener" class="link-tag">GitHub PR #66 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2024-01-14: Project Genesis: @simpleworkjs/conf Zero-DSL Hierarchical Configuration -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2024-01-14</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">simpleworkjs/conf</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Zero-DSL Config</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/simpleworkjs/conf" target="_blank" rel="noopener">
+              Project Genesis: @simpleworkjs/conf Zero-DSL Hierarchical Configuration
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>First commit of <code>@simpleworkjs/conf</code>: born from the frustration of over-engineered Node.js configuration frameworks.</p>
+            <p>One require statement deep-merges a <code>conf/base.js</code> with per-environment overrides and a gitignored <code>secrets.js</code> based on <code>NODE_ENV</code>, with zero DSLs and zero bloat.</p>
+            <div class="chronicle-code">
+              <code>npm install @simpleworkjs/conf</code>
+              <button class="copy-btn" data-copy="npm install @simpleworkjs/conf">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/simpleworkjs/conf" target="_blank" rel="noopener" class="link-tag">GitHub: simpleworkjs/conf ↗</a>
+            <a href="https://simpleworkjs.github.io/conf/" target="_blank" rel="noopener" class="link-tag">Conf Docs ↗</a>
+          </div>
+        </article>
+
+        <!-- 2023-10-03: Codeland: Self-Hosted Serverless Runtimes in Isolated Linux Containers -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2023-10-03</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">codeland-ecosystem</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Serverless LXC</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">
+              Codeland: Self-Hosted Serverless Runtimes in Isolated Linux Containers
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Initial release of the <code>codeland-ecosystem</code> runner manager and CRunner daemon. Long before modern cloud sandboxes became common, we engineered a self-hosted serverless code execution platform supporting 24 programming languages.</p>
+            <p>Featured pre-warmed container pools for instant sub-second cold starts, interactive WebSocket terminals, and isolated LXC sandboxing on a frugal $40/month hardware footprint.</p>
             <div class="chronicle-quote">
               "Real Linux containers, instant terminal multiplexing, and auto-scaling runners. A testament to architecting systems cleanly instead of burning venture capital."
             </div>
@@ -452,31 +1004,301 @@
           <div class="chronicle-links">
             <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener" class="link-tag">GitHub: @codeland-ecosystem ↗</a>
             <a href="https://github.com/codeland-ecosystem/manager" target="_blank" rel="noopener" class="link-tag">Runner Manager ↗</a>
-            <a href="https://github.com/codeland-ecosystem/crunner" target="_blank" rel="noopener" class="link-tag">CRunner Daemon ↗</a>
           </div>
         </article>
 
-        <!-- 2016: jq-repeat -->
+        <!-- 2022-01-09: Project Genesis: model-redis Schema-Driven Object Mapper for Redis -->
         <article class="chronicle-card" data-category="frameworks">
           <div class="chronicle-meta">
             <div class="chronicle-date-wrap">
-              <span class="chronicle-date">2016-04</span>
+              <span class="chronicle-date">2022-01-09</span>
               <span class="chronicle-category">Frameworks & Tools</span>
             </div>
-            <span class="chronicle-badge">Open Source Classic</span>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/model-redis</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Redis ORM</span>
+            </div>
           </div>
           <h3 class="chronicle-title">
-            <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener">
-              jq-repeat: Reactive DOM Lists Without Monolithic Frameworks
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener">
+              Project Genesis: model-redis Schema-Driven Object Mapper for Redis
             </a>
           </h3>
           <div class="chronicle-body">
-            <p>
-              Angular 1.x introduced developers to the magic of <code>ng-repeat</code>, but importing an entire monolithic framework just to synchronize an array of items with the DOM was unnecessary bloat.
-            </p>
-            <p>
-              We built <strong>jq-repeat</strong> to bring reactive, declarative list rendering to jQuery and vanilla JS. It automatically synchronizes the DOM when arrays are mutated via <code>push</code>, <code>pop</code>, or <code>splice</code>, while providing granular lifecycle animation hooks (<code>__put</code>, <code>__take</code>, <code>__putUpdate</code>). It proved that reactive interfaces don't require 300KB bundle sizes.
-            </p>
+            <p>Extracted the ultra-fast Redis data modeling layer from Theta Proxy into a standalone NPM package.</p>
+            <p>Provides schema validation, index tracking, secondary key queries, and automatic JSON serialization with only a single dependency on the native <code>redis</code> client.</p>
+            <div class="chronicle-code">
+              <code>npm install model-redis</code>
+              <button class="copy-btn" data-copy="npm install model-redis">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/model-redis" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/model-redis ↗</a>
+            <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener" class="link-tag">NPM: model-redis ↗</a>
+          </div>
+        </article>
+
+        <!-- 2020-12-21: PR #38: Wildcard Socket Routing & High-Speed Ingress Cache -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2020-12-21</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #38 Merged</span>
+              <span class="chronicle-badge">High-Speed Ingress</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/38" target="_blank" rel="noopener">
+              PR #38: Wildcard Socket Routing & High-Speed Ingress Cache
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Merged wildcard hostname pattern matching and memory caching for high-throughput socket routing.</p>
+            <p>Eliminated repetitive database reads on incoming HTTP connections, allowing Theta Proxy to handle thousands of requests per second on budget hardware.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/38" target="_blank" rel="noopener" class="link-tag">GitHub PR #38 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2020-08-19: Project Genesis: p2psub Zero-Dependency Decentralized P2P Pub/Sub -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2020-08-19</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/p2psub</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">P2P Network</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/p2psub" target="_blank" rel="noopener">
+              Project Genesis: p2psub Zero-Dependency Decentralized P2P Pub/Sub
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Initial commit of <code>wmantly/p2psub</code>. Designed as a pure peer-to-peer pub/sub messaging engine in Node.js with zero external dependencies.</p>
+            <p>Features automatic peer reconnection, heartbeat gossip, and RegExp topic subscriptions for building decentralized tools without central message brokers.</p>
+            <div class="chronicle-code">
+              <code>npm install p2psub</code>
+              <button class="copy-btn" data-copy="npm install p2psub">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/p2psub" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/p2psub ↗</a>
+            <a href="https://www.npmjs.com/package/p2psub" target="_blank" rel="noopener" class="link-tag">NPM: p2psub ↗</a>
+          </div>
+        </article>
+
+        <!-- 2020-05-03: Project Genesis: Lightweight Web Management for OpenLDAP Directories -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2020-05-03</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/theta-directory</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">LDAP Web UI</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener">
+              Project Genesis: Lightweight Web Management for OpenLDAP Directories
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Initial commit of <code>theta42/theta-directory</code>. Built to replace bulky enterprise LDAP management tools with a lightweight, modern web interface.</p>
+            <p>Enables administrators to manage users, groups, and permissions over clean REST endpoints without complex LDAP schema tooling.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/theta-directory ↗</a>
+          </div>
+        </article>
+
+        <!-- 2020-04-11: PR #27 & #28: The First Web GUI & REST API v1 for Dynamic Proxy Routing -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2020-04-11</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #27 & #28 Merged</span>
+              <span class="chronicle-badge">First Web GUI</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/27" target="_blank" rel="noopener">
+              PR #27 & #28: The First Web GUI & REST API v1 for Dynamic Proxy Routing
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Shipped the first browser-based graphical user interface (PR #27) and the foundational REST API v1 (PR #28) for Theta Proxy.</p>
+            <p>Operators can view active host routes, monitor backend health, and provision new proxy destinations directly from the browser.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/27" target="_blank" rel="noopener" class="link-tag">GitHub PR #27 ↗</a>
+            <a href="https://github.com/theta42/proxy/pull/28" target="_blank" rel="noopener" class="link-tag">GitHub PR #28 ↗</a>
+          </div>
+        </article>
+
+        <!-- 2019-09-02: PR #9: Redis Configuration Backplane & Interactive Hosts CLI -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2019-09-02</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #9 Merged</span>
+              <span class="chronicle-badge">Redis Backplane</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/9" target="_blank" rel="noopener">
+              PR #9: Redis Configuration Backplane & Interactive Hosts CLI
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Transitioned Theta Proxy from static configuration files to Redis as a dynamic central backplane.</p>
+            <p>Introduced the <code>hostsCLI</code> command-line utility, allowing routes to be inspected, added, or modified instantly across multiple proxy nodes.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/9" target="_blank" rel="noopener" class="link-tag">GitHub PR #9 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2019-08-29: PR #6: Node.js 12 Runtime Modernization & PAM Security Hardening -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2019-08-29</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">PR #6 Merged</span>
+              <span class="chronicle-badge">Runtime & Security</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy/pull/6" target="_blank" rel="noopener">
+              PR #6: Node.js 12 Runtime Modernization & PAM Security Hardening
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Upgraded the proxy daemon for Node.js 12 LTS with native async/await patterns and dependency vulnerability updates.</p>
+            <p>Integrated Linux Pluggable Authentication Modules (PAM) for secure local system account verification.</p>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy/pull/6" target="_blank" rel="noopener" class="link-tag">GitHub PR #6 ↗</a>
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">theta42/proxy ↗</a>
+          </div>
+        </article>
+
+        <!-- 2018-02-05: Project Genesis: The First Commit of Theta Proxy (Feb 5, 2018) -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2018-02-05</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42/proxy</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Origin Commit</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">
+              Project Genesis: The First Commit of Theta Proxy (Feb 5, 2018)
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p><strong>February 5, 2018 (commit <code>83a1ef3</code>)</strong>: William Mantly commits the initial prototype of Theta Proxy.</p>
+            <p>Born out of the frustration of having to reload Nginx and drop active connections every time a new microservice or container was added, the project began as a quest for a genuinely zero-reload dynamic ingress proxy for sovereign infrastructure.</p>
+            <div class="chronicle-quote">
+              "Why should adding a backend route require restarting the web server? Software should adapt dynamically to infrastructure changes without downtime."
+              <span class="chronicle-quote-author">— William Mantly</span>
+            </div>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/theta42/proxy.git</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/proxy.git">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/proxy ↗</a>
+            <a href="https://theta42.github.io/proxy/" target="_blank" rel="noopener" class="link-tag">Proxy Documentation ↗</a>
+          </div>
+        </article>
+
+        <!-- 2017-11-01: Theta 42, INC Founded: Digital Sovereignty & Sovereign Software in the Open -->
+        <article class="chronicle-card" data-category="community">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2017-11-01</span>
+              <span class="chronicle-category">Community & Lore</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">theta42</span>
+              <span class="chronicle-pr-tag">Corporate Genesis</span>
+              <span class="chronicle-badge">Founding Milestone</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://theta42.com" target="_blank" rel="noopener">
+              Theta 42, INC Founded: Digital Sovereignty & Sovereign Software in the Open
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p><strong>November 2017</strong>: Theta 42, INC was officially incorporated with a clear ethos: engineering enterprise-grade, sovereign software that organizations, developers, and homelabbers can truly own.</p>
+            <p>Rejecting closed cloud lock-in, recurring API taxes, and intrusive telemetry, Theta 42 commits to building open, air-gappable infrastructure and community-first tools for the long haul.</p>
+            <div class="chronicle-quote">
+              "You should own the machines that store your data, authenticate your identity, and run your models. Rent-seeking SaaS monopolies compromise privacy, security, and long-term autonomy."
+              <span class="chronicle-quote-author">— Theta42 Manifesto</span>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://theta42.com/" target="_blank" rel="noopener" class="link-tag">Theta42 Commercial AI ↗</a>
+            <a href="https://theta42.com/#security-deep-dive" target="_blank" rel="noopener" class="link-tag">Security Architecture ↗</a>
+          </div>
+        </article>
+
+        <!-- 2015-01-14: Project Genesis: jq-repeat Reactive DOM Lists Without Monolithic Frameworks -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2015-01-14</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/jq-repeat</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Reactive DOM</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener">
+              Project Genesis: jq-repeat Reactive DOM Lists Without Monolithic Frameworks
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Angular 1.x introduced developers to the magic of <code>ng-repeat</code>, but importing an entire monolithic framework just to synchronize an array of items with the DOM was unnecessary bloat.</p>
+            <p>We built <strong>jq-repeat</strong> to bring reactive, declarative list rendering to jQuery and vanilla JS. It automatically synchronizes the DOM when arrays are mutated via <code>push</code>, <code>pop</code>, or <code>splice</code>, with granular animation hooks (<code>__put</code>, <code>__take</code>, <code>__putUpdate</code>).</p>
             <div class="chronicle-code">
               <code>npm install jq-repeat</code>
               <button class="copy-btn" data-copy="npm install jq-repeat">Copy</button>
@@ -488,6 +1310,44 @@
           </div>
         </article>
 
+        <!-- 2014-12-11: Project Genesis: linux-user / linux-sys-user Zero-Dependency System Management -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2014-12-11</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <div class="chronicle-badges-group">
+              <span class="chronicle-repo">wmantly/linux-user</span>
+              <span class="chronicle-pr-tag">Project Genesis</span>
+              <span class="chronicle-badge">Sysadmin Core</span>
+            </div>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener">
+              Project Genesis: linux-user / linux-sys-user Zero-Dependency System Management
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>Released <code>linux-user</code> (now <code>linux-sys-user</code>): managing Linux system users, groups, and SSH authorized keys directly from Node.js with zero external dependencies.</p>
+            <p>Engineered with unprivileged read-only calls for information retrieval and root requirements strictly limited to state mutations.</p>
+            <div class="chronicle-code">
+              <code>npm install linux-sys-user</code>
+              <button class="copy-btn" data-copy="npm install linux-sys-user">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/linux-user ↗</a>
+            <a href="https://www.npmjs.com/package/linux-sys-user" target="_blank" rel="noopener" class="link-tag">NPM: linux-sys-user ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="pagination-container">
+        <div class="pagination-controls"></div>
+        <div class="pagination-info"></div>
       </div>
     </div>
   </section>
