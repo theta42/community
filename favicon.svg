@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#0a0a0a"/>
+  
+  <!-- Theta: circle -->
+  <circle cx="22" cy="32" r="13" fill="none" stroke="#c8a96e" stroke-width="2.2"/>
+  <!-- Theta: horizontal bar -->
+  <line x1="12" y1="32" x2="32" y2="32" stroke="#c8a96e" stroke-width="2.2"/>
+
+  <!-- Divider -->
+  <line x1="38" y1="18" x2="38" y2="46" stroke="#c8a96e" stroke-width="1" opacity="0.4"/>
+
+  <!-- "42" in DM Mono style, compact -->
+  <text x="42" y="38" font-family="Georgia, serif" font-size="16" font-weight="400" fill="#c8a96e" letter-spacing="-0.5">42</text>
+</svg>

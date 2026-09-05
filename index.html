@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theta42 Community — Open Source, Free Software & Chronicle</title>
+  <meta name="description" content="Theta42 community hub, open-source software showcase, engineering chronicle, and free tools. Explore Maki, Theta Suite, Proxy, SimpleWorkJS, Codeland, and CoreJourney.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Theta42 Community">
+  <meta property="og:title" content="Theta42 Community — Sovereign Software in the Open">
+  <meta property="og:description" content="A decade of engineering independence: from pre-warmed container runtimes and zero-reload ingress proxies to remote-controlled AI coding agents and community-preserved worlds.">
+  <meta property="og:url" content="https://community.theta42.com/">
+  <meta property="og:image" content="https://theta42.com/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Theta42 Community — Sovereign Software in the Open">
+  <meta name="twitter:description" content="A decade of open-source tools, infrastructure releases, and community chronicles.">
+  <meta name="twitter:image" content="https://theta42.com/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="nav-brand-wrap">
+      <div class="nav-logo">Theta<span>42</span></div>
+      <span class="nav-badge">Community</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#chronicle">Chronicle</a></li>
+      <li><a href="#projects">Ecosystem</a></li>
+      <li><a href="#ethos">Ethos</a></li>
+      <li><a href="#community">Chat</a></li>
+      <li><a href="#donate" class="active">Support</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://theta42.com/" target="_blank" rel="noopener" class="nav-external">
+        Enterprise AI ↗
+      </a>
+      <a href="#donate" class="nav-cta">Donate</a>
+    </div>
+
+    <button class="mobile-toggle" aria-label="Toggle navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-eyebrow">Theta42 Open Source & Community Hub</div>
+      <h1>Building Sovereign Software <em>In The Open</em>.</h1>
+      <p class="hero-sub">
+        A decade of engineering independence: from pre-warmed container runtimes and zero-reload ingress proxies to remote-controlled AI coding agents and community-preserved worlds. Free for developers, homelabbers, and humans.
+      </p>
+
+      <div class="btn-group">
+        <a href="#chronicle" class="btn btn-primary">Read The Chronicle ↓</a>
+        <a href="#projects" class="btn btn-ghost">Explore Projects</a>
+        <a href="#donate" class="btn btn-ghost">Support The Work</a>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="stat-num">10+ Years</div>
+          <div class="stat-label">Open Source Work</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">1.5 TB+</div>
+          <div class="stat-label">Preserved History</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0% Pay-To-Win</div>
+          <div class="stat-label">Zero API Taxes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100% Sovereign</div>
+          <div class="stat-label">Air-Gappable & Free</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- THE CHRONICLE / MINI BLOG -->
+  <section id="chronicle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Engineering Chronicle & Dispatches</div>
+        <h2>Field Notes, Milestones & Lore</h2>
+        <p class="section-desc">
+          Real engineering history dating back over a decade. Every tool and system we publish originates from solving real friction without renting software from third-party monopolies.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Dispatches</button>
+        <button class="filter-btn" data-filter="ai">AI & Systems</button>
+        <button class="filter-btn" data-filter="infra">Infrastructure</button>
+        <button class="filter-btn" data-filter="frameworks">Frameworks & Tools</button>
+        <button class="filter-btn" data-filter="community">Community & Lore</button>
+      </div>
+
+      <!-- Chronicle Stream -->
+      <div class="chronicle-stream">
+
+        <!-- 2026: Maki Remote Control & Web UI -->
+        <article class="chronicle-card" data-category="ai">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-09</span>
+              <span class="chronicle-category">AI & Systems</span>
+            </div>
+            <span class="chronicle-badge">Latest Release</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener">
+              Maki: Remote Control & Web UI for Native AI Coding Agents
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              AI coding assistants shouldn't require bloated, memory-hungry Electron wrappers that trap your codebase in closed clouds. Maki is a native, lightning-fast Rust-based AI agent extendable via Neovim-style Lua plugins and the Agent Client Protocol (ACP) for modern editors like Zed.
+            </p>
+            <p>
+              We expanded Maki with <strong>full remote control capabilities and a dedicated Web UI</strong> to monitor, prompt, and manage autonomous coding sessions from any browser on the local network or Tailnet. We eliminated latent race conditions in async control tunnels so commands execute synchronously without synthetic pauses, hooked dynamic provider scripts into <code>~/.config/maki/providers/</code>, and optimized local model routing.
+            </p>
+            <div class="chronicle-quote">
+              "Why rent a closed SaaS agent when you can run a native Rust engine directly on your hardware, hack it with Lua, and orchestrate it remotely from a clean Web UI?"
+              <span class="chronicle-quote-author">— William Mantly</span>
+            </div>
+            <div class="chronicle-code">
+              <code>curl -fsSL https://maki.sh/install.sh | sh</code>
+              <button class="copy-btn" data-copy="curl -fsSL https://maki.sh/install.sh | sh">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/maki ↗</a>
+            <a href="https://maki.sh/docs" target="_blank" rel="noopener" class="link-tag">Documentation ↗</a>
+            <a href="https://github.com/tontinton/maki" target="_blank" rel="noopener" class="link-tag">Upstream Repo ↗</a>
+          </div>
+        </article>
+
+        <!-- 2026: Theta Suite v1.5.0 & UI Unification -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2026-07</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <span class="chronicle-badge">Unified Milestone</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener">
+              The Sovereign Stack: Theta Suite v1.5.0 & Complete UI Unification
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Setting up enterprise-grade identity, access, and secrets in a home lab or small enterprise used to mean wrestling with Okta bills or Keycloak's overwhelming resource footprint. <strong>Theta Suite</strong> (formerly <code>theta-env</code>) bundles an OIDC/LDAP identity provider, an OIDC-aware reverse proxy, an inventory-driven SSH jump host, and Linux host enrollment into a single <code>./setup.sh</code> Docker Compose stack.
+            </p>
+            <p>
+              In v1.5.0, we completed full UI unification across all three core apps (Proxy v1.4.0, Theta Directory v1.5.0, and Jump Host v1.3.0). Every app now shares a byte-identical shell, unified client-side group gating, cached OIDC auth promises, and automated inventory graphing for Proxmox VMs, UniFi clients, and Docker containers—all reading from a shared OpenBao secrets store.
+            </p>
+            <div class="chronicle-quote">
+              "Enterprise SSO without the enterprise. Keycloak and Authentik make you bring your own directory; Theta Suite ships one out of the box."
+            </div>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/theta42/theta-suite.git &amp;&amp; cd theta-suite &amp;&amp; ./setup.sh</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-suite.git && cd theta-suite && ./setup.sh">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener" class="link-tag">Suite Docs ↗</a>
+            <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">theta-suite ↗</a>
+            <a href="https://github.com/theta42/theta-directory" target="_blank" rel="noopener" class="link-tag">theta-directory ↗</a>
+            <a href="https://github.com/theta42/jump-host" target="_blank" rel="noopener" class="link-tag">jump-host ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025: CoreJourney & #SaveCJ -->
+        <article class="chronicle-card" data-category="community">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025–2026</span>
+              <span class="chronicle-category">Community & Lore</span>
+            </div>
+            <span class="chronicle-badge">Community Preserved</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://corejourney.org" target="_blank" rel="noopener">
+              The Rebirth of CoreJourney: Rescuing 5 Years of History (#SaveCJ)
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              In February 2025, after 5 years of continuous hardcore survival, the original creator of CoreJourney announced the server would permanently shut down on its 5th anniversary due to lack of time and hosting funds. For thousands of players who had built monuments, fought clan wars, and endured real death bans, a digital universe was about to vanish.
+            </p>
+            <p>
+              William (known in-game as <code>tux4242</code> / <code>wmantly</code> / <code>useless666</code>), a 5-year veteran player, posted the <strong>#SaveCJ</strong> pledge to take the torch. The transfer was agreed upon: <strong>1.5 TB of raw Minecraft world history</strong> was transferred over a 10GbE fiber link directly to enterprise HPE DL380 servers in his homelab.
+            </p>
+            <p>
+              Through the community "CDD" (CoreJourney Disk Drive) fundraiser, players pooled together to buy Crucial MX500 SSDs for redundant ZFS mirrors. William modernized the stack through versions 1.20, 1.21.4, 1.21.10, and 26.1.2 ("Spring to Life"). He engineered a custom SQLite WAL live statistics platform (<a href="https://corejourney.org" target="_blank" rel="noopener">corejourney.org</a>) tracking PvP kills, rivalries, death bans, and player lifespans, alongside a community lore wiki (<a href="https://wiki.corejourney.org" target="_blank" rel="noopener">wiki.corejourney.org</a>).
+            </p>
+            <div class="chronicle-quote">
+              "Technically, CJ is now run and operated by Theta 42? But I'm Theta 42 and Theta 42 is me... We don't do pay-to-win. You donate $5 and get a Golden Dandelion or a copper pickaxe; 100% of the funds keep the hardware running and pay the electric bill."
+              <span class="chronicle-quote-author">— #SaveCJ Announcement</span>
+            </div>
+            <div class="chronicle-code">
+              <code>Server Address: corejourney.org (Hardcore Survival, PvP &amp; Leaderboards)</code>
+              <button class="copy-btn" data-copy="corejourney.org">Copy IP</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">Live Server Stats ↗</a>
+            <a href="https://wiki.corejourney.org" target="_blank" rel="noopener" class="link-tag">Community Wiki ↗</a>
+            <a href="https://www.reddit.com/r/corejourney/comments/1iwcb8o/savecj/" target="_blank" rel="noopener" class="link-tag">Reddit #SaveCJ ↗</a>
+            <a href="#donate" class="link-tag">Donate to Server ↗</a>
+          </div>
+        </article>
+
+        <!-- 2025: The Proxy -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2025-01</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <span class="chronicle-badge">Core Engine</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">
+              The Proxy: Dynamic Zero-Reload Ingress with Native Directory SSO
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Most reverse proxies treat authentication as an afterthought or force you into clunky third-party middleware plugins with static configuration files. We built <strong>Theta Proxy</strong> to put any backend service behind single sign-on with zero reload downtime.
+            </p>
+            <p>
+              Built on OpenResty with Lua-based edge routing and a Node.js management API, it interfaces with Redis via our custom <code>model-redis</code> ORM. It automatically handles Let's Encrypt wildcard certificates via DNS-01 challenges (supporting Porkbun, Cloudflare, DigitalOcean, and DuckDNS). Crucially, it speaks both OIDC and OpenLDAP directly, allowing access decisions to be evaluated against real user directory groups in real time.
+            </p>
+            <div class="chronicle-quote">
+              "Per-host rate limiting, response caching, HSTS, round-robin load balancing, and self-service API tokens for automation—all without restarting Nginx."
+            </div>
+            <div class="chronicle-code">
+              <code>git clone https://github.com/theta42/proxy.git &amp;&amp; cd proxy &amp;&amp; sudo ./ops/install.sh</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/proxy.git && cd proxy && sudo ./ops/install.sh">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">GitHub: theta42/proxy ↗</a>
+            <a href="https://theta42.github.io/proxy/" target="_blank" rel="noopener" class="link-tag">Proxy Docs ↗</a>
+            <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener" class="link-tag">NPM: model-redis ↗</a>
+          </div>
+        </article>
+
+        <!-- 2024: SimpleWorkJS -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2024-05</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <span class="chronicle-badge">Zero-Bloat Stack</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">
+              SimpleWorkJS: Stripping the Bloat from Modern Node.js
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Why do modern web application backends require 50 configuration files, complex decorator DSLs, and thousands of transitive dependencies? SimpleWorkJS is a minimalist toolkit designed for developers who want simplicity and speed:
+            </p>
+            <p>
+              <code>@simpleworkjs/conf</code> offers hierarchical config management in one require: drop a <code>conf/</code> directory with <code>base.js</code>, per-environment overrides, and a gitignored <code>secrets.js</code>, deep-merging by <code>NODE_ENV</code> with one dependency. Paired with <code>@simpleworkjs/orm-identity</code>, <code>@simpleworkjs/backend</code>, and <code>@simpleworkjs/bao-conf</code> (Vault KV-v2 integration), it powers fast, robust distributed apps.
+            </p>
+            <div class="chronicle-code">
+              <code>npm install @simpleworkjs/conf @simpleworkjs/backend @simpleworkjs/orm-identity</code>
+              <button class="copy-btn" data-copy="npm install @simpleworkjs/conf @simpleworkjs/backend @simpleworkjs/orm-identity">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener" class="link-tag">GitHub: @simpleworkjs ↗</a>
+            <a href="https://simpleworkjs.github.io/conf/" target="_blank" rel="noopener" class="link-tag">Conf Docs ↗</a>
+            <a href="https://www.npmjs.com/package/@simpleworkjs/conf" target="_blank" rel="noopener" class="link-tag">NPM: @simpleworkjs/conf ↗</a>
+          </div>
+        </article>
+
+        <!-- 2021: Codeland Ecosystem -->
+        <article class="chronicle-card" data-category="infra">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2021-08</span>
+              <span class="chronicle-category">Infrastructure</span>
+            </div>
+            <span class="chronicle-badge">Pioneer Architecture</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">
+              Codeland: Self-Hosted Serverless Containers on Frugal Hardware
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Long before modern browser-based execution platforms like Replit were properly established, we engineered <strong>Codeland</strong>: a self-hosted serverless code execution platform supporting 24 programming languages inside genuine isolated Linux containers (LXC).
+            </p>
+            <p>
+              The <code>codeland-ecosystem</code> featured a sophisticated control plane: pre-warmed container pools for instant sub-second cold starts, interactive WebSocket terminals, auto-scaling worker nodes, and instant public URLs—all running smoothly on a frugal $40/month infrastructure footprint.
+            </p>
+            <div class="chronicle-quote">
+              "Real Linux containers, instant terminal multiplexing, and auto-scaling runners. A testament to architecting systems cleanly instead of burning venture capital."
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener" class="link-tag">GitHub: @codeland-ecosystem ↗</a>
+            <a href="https://github.com/codeland-ecosystem/manager" target="_blank" rel="noopener" class="link-tag">Runner Manager ↗</a>
+            <a href="https://github.com/codeland-ecosystem/crunner" target="_blank" rel="noopener" class="link-tag">CRunner Daemon ↗</a>
+          </div>
+        </article>
+
+        <!-- 2016: jq-repeat -->
+        <article class="chronicle-card" data-category="frameworks">
+          <div class="chronicle-meta">
+            <div class="chronicle-date-wrap">
+              <span class="chronicle-date">2016-04</span>
+              <span class="chronicle-category">Frameworks & Tools</span>
+            </div>
+            <span class="chronicle-badge">Open Source Classic</span>
+          </div>
+          <h3 class="chronicle-title">
+            <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener">
+              jq-repeat: Reactive DOM Lists Without Monolithic Frameworks
+            </a>
+          </h3>
+          <div class="chronicle-body">
+            <p>
+              Angular 1.x introduced developers to the magic of <code>ng-repeat</code>, but importing an entire monolithic framework just to synchronize an array of items with the DOM was unnecessary bloat.
+            </p>
+            <p>
+              We built <strong>jq-repeat</strong> to bring reactive, declarative list rendering to jQuery and vanilla JS. It automatically synchronizes the DOM when arrays are mutated via <code>push</code>, <code>pop</code>, or <code>splice</code>, while providing granular lifecycle animation hooks (<code>__put</code>, <code>__take</code>, <code>__putUpdate</code>). It proved that reactive interfaces don't require 300KB bundle sizes.
+            </p>
+            <div class="chronicle-code">
+              <code>npm install jq-repeat</code>
+              <button class="copy-btn" data-copy="npm install jq-repeat">Copy</button>
+            </div>
+          </div>
+          <div class="chronicle-links">
+            <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener" class="link-tag">GitHub: wmantly/jq-repeat ↗</a>
+            <a href="https://www.npmjs.com/package/jq-repeat" target="_blank" rel="noopener" class="link-tag">NPM: jq-repeat ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS DIRECTORY -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Open Source Catalog</div>
+        <h2>Tools, Libraries & Runtimes</h2>
+        <p class="section-desc">
+          Everything built and maintained across the Theta42 ecosystem. Free, MIT-licensed, and designed to run on sovereign infrastructure.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Theta Suite -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Infrastructure</span>
+              <span class="project-stars">Flagship Stack</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener">Theta Suite</a>
+            </h4>
+            <p class="project-desc">
+              Complete self-hosted identity, proxy, and jump host stack in one <code>./setup.sh</code>. Bundles OIDC/OpenLDAP SSO, OpenResty ingress, dynamic inventory mapping, and OpenBao secrets into a single Docker Compose environment.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>git clone theta-suite</span>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/theta-suite.git">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://theta42.github.io/theta-suite/" target="_blank" rel="noopener" class="link-tag">Docs ↗</a>
+              <a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Proxy -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Networking & Security</span>
+              <span class="project-stars">Ingress Edge</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">Theta Proxy</a>
+            </h4>
+            <p class="project-desc">
+              High-performance OpenResty/Lua reverse proxy with native OIDC + LDAP directory authentication. Zero-reload hostname routing, Redis data storage, and automated Let's Encrypt wildcard DNS challenges.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>git clone proxy</span>
+              <button class="copy-btn" data-copy="git clone https://github.com/theta42/proxy.git">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://theta42.github.io/proxy/" target="_blank" rel="noopener" class="link-tag">Docs ↗</a>
+              <a href="https://github.com/theta42/proxy" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maki -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">AI & Systems</span>
+              <span class="project-stars">Coding Agent</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener">Maki (Remote & WebUI)</a>
+            </h4>
+            <p class="project-desc">
+              Native, ultra-efficient Rust AI coding assistant with Lua extension hooks and ACP protocol for Zed. Extended with remote control orchestration and a dedicated management Web UI.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>curl -fsSL maki.sh | sh</span>
+              <button class="copy-btn" data-copy="curl -fsSL https://maki.sh/install.sh | sh">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://maki.sh/docs" target="_blank" rel="noopener" class="link-tag">Docs ↗</a>
+              <a href="https://github.com/wmantly/maki" target="_blank" rel="noopener" class="link-tag">Fork ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Codeland -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Runtimes</span>
+              <span class="project-stars">Serverless</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">Codeland Ecosystem</a>
+            </h4>
+            <p class="project-desc">
+              Self-hosted serverless code execution platform. 24 languages, isolated Linux containers (LXC), pre-warmed worker pools, WebSocket interactive terminals, and instant public URLs on $40/mo hardware.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-actions">
+              <a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener" class="link-tag">GitHub Org ↗</a>
+              <a href="https://github.com/codeland-ecosystem/manager" target="_blank" rel="noopener" class="link-tag">Manager ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SimpleWorkJS -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Frameworks</span>
+              <span class="project-stars">Zero-DSL Node</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">SimpleWorkJS</a>
+            </h4>
+            <p class="project-desc">
+              Pragmatic application stack: <code>@simpleworkjs/conf</code> (hierarchical zero-DSL config management), <code>@simpleworkjs/orm-identity</code>, and lightweight backend/frontend libraries for clean Node.js applications.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i @simpleworkjs/conf</span>
+              <button class="copy-btn" data-copy="npm install @simpleworkjs/conf">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://simpleworkjs.github.io/conf/" target="_blank" rel="noopener" class="link-tag">Docs ↗</a>
+              <a href="https://github.com/simpleworkjs" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CoreJourney -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Gaming & Telemetry</span>
+              <span class="project-stars">Hardcore Server</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://corejourney.org" target="_blank" rel="noopener">CoreJourney</a>
+            </h4>
+            <p class="project-desc">
+              Legendary 5+ year hardcore survival Minecraft server running on sovereign HPE DL380 hardware. Custom real-time SQLite WAL telemetry web app tracking death bans, kills, and leaderboards with strictly zero pay-to-win.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>corejourney.org</span>
+              <button class="copy-btn" data-copy="corejourney.org">Copy IP</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">Live Stats ↗</a>
+              <a href="https://wiki.corejourney.org" target="_blank" rel="noopener" class="link-tag">Wiki ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- linux-sys-user -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">NPM Library</span>
+              <span class="project-stars">Zero-Dep</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://www.npmjs.com/package/linux-sys-user" target="_blank" rel="noopener">linux-sys-user</a>
+            </h4>
+            <p class="project-desc">
+              Linux user and group management from Node.js with zero dependencies. Promises &amp; async/await. Unprivileged read-only calls (getUsers, getUserInfo, verifySSHKey) with root required only for mutation.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i linux-sys-user</span>
+              <button class="copy-btn" data-copy="npm install linux-sys-user">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://www.npmjs.com/package/linux-sys-user" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
+              <a href="https://github.com/wmantly/linux-user" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- model-redis -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Database / ORM</span>
+              <span class="project-stars">Fast Redis ORM</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener">model-redis</a>
+            </h4>
+            <p class="project-desc">
+              Simple ORM model with schema for Redis in Node.js. Only one external dependency (redis). Designed for high-speed, lightweight internal infrastructure systems without heavy relational baggage.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i model-redis</span>
+              <button class="copy-btn" data-copy="npm install model-redis">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://www.npmjs.com/package/model-redis" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- jq-repeat -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-tag-strip">
+              <span class="project-cat">Frontend Library</span>
+              <span class="project-stars">Reactive Lists</span>
+            </div>
+            <h4 class="project-name">
+              <a href="https://www.npmjs.com/package/jq-repeat" target="_blank" rel="noopener">jq-repeat</a>
+            </h4>
+            <p class="project-desc">
+              Angular's reactive <code>ng-repeat</code> extracted into an ultra-lean plugin. Auto DOM sync on push/pop/splice with fine-grained lifecycle hooks (<code>__put</code>, <code>__take</code>, <code>__putUpdate</code>).
+            </p>
+          </div>
+          <div class="project-bottom">
+            <div class="project-cmd">
+              <span>npm i jq-repeat</span>
+              <button class="copy-btn" data-copy="npm install jq-repeat">Copy</button>
+            </div>
+            <div class="project-actions">
+              <a href="https://www.npmjs.com/package/jq-repeat" target="_blank" rel="noopener" class="link-tag">NPM ↗</a>
+              <a href="https://github.com/wmantly/jq-repeat" target="_blank" rel="noopener" class="link-tag">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ETHOS / MANIFESTO -->
+  <section id="ethos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Guiding Principles</div>
+        <h2>Why We Build In The Open</h2>
+      </div>
+
+      <div class="ethos-grid">
+        <div class="ethos-item">
+          <h4>Digital Sovereignty</h4>
+          <p>
+            You should own the machines that store your data, authenticate your identity, and run your models. Rent-seeking cloud subscriptions and black-box SaaS APIs compromise privacy, security, and long-term autonomy.
+          </p>
+        </div>
+
+        <div class="ethos-item">
+          <h4>Pragmatic Architecture</h4>
+          <p>
+            Software should be lean, battle-tested, and transparent. We avoid configuration ceremony, bloated dependencies, and speculative complexity in favor of straightforward code that stays running for years.
+          </p>
+        </div>
+
+        <div class="ethos-item">
+          <h4>Community Stewardship</h4>
+          <p>
+            Whether preserving an unmaintained open-source library or rescuing a 5-year gaming community from shutdown, code is about people. We build with strict integrity, zero pay-to-win tricks, and complete transparency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATIONS / SUPPORT -->
+  <section id="donate">
+    <div class="container">
+      <div class="donate-box">
+        <div class="donate-glow"></div>
+        <div class="donate-content">
+          <div class="donate-text">
+            <div class="section-eyebrow">Back Independent Software</div>
+            <h3>Keep The Hardware Powered &amp; Code Free.</h3>
+            <p>
+              Theta42's community tools, open-source repositories, and public servers (like CoreJourney) are self-hosted on physical enterprise servers (HPE DL380s with 10GbE networking and Crucial MX500 ZFS mirror storage arrays).
+            </p>
+            <p>
+              We don't take venture capital, we don't sell user data, and we don't do pay-to-win. <strong>100% of community contributions go directly toward:</strong>
+            </p>
+            <ul class="donate-reasons">
+              <li>Server electricity, cooling, and homelab hosting power</li>
+              <li>High-end SSD replacements and ZFS storage drives</li>
+              <li>Domain registrations and DNS infrastructure</li>
+              <li>Dedicated CI/CD build runners and continuous development</li>
+            </ul>
+          </div>
+
+          <div class="donate-card">
+            <div class="donate-badge">Direct Contribution</div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.6rem;">Support Theta42</h4>
+            <p class="donate-note">
+              Every dollar directly covers infrastructure costs and keeps our free software and community services running smoothly.
+            </p>
+
+            <div class="paypal-btn-wrap">
+              <!-- PayPal Donation Button Link -->
+              <a href="https://www.paypal.com/donate?hosted_button_id=L9BYTWTB2NQTY" target="_blank" rel="noopener" class="paypal-donate-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.641.641 0 0 1 .632-.54h7.525c3.08 0 5.483.744 6.376 2.37.766 1.396.697 3.23-.23 5.454-.925 2.222-2.584 3.774-4.887 4.57-1.127.387-2.434.568-3.876.568H8.38l-1.304 5.195zm1.51-7.25h1.996c2.81 0 5.006-.72 5.864-2.776.732-1.756.634-3.136-.296-4.1-.734-.76-2.072-1.173-3.98-1.173H7.502L5.87 18.28h2.09l.626-4.193z"/>
+                </svg>
+                Donate via PayPal
+              </a>
+            </div>
+
+            <div class="donate-alt">
+              Need alternative donation avenues? Crypto or GitHub Sponsors available on request. Message <code>wmantly@gmail.com</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY & CHAT -->
+  <section id="community">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Connect &amp; Collaborate</div>
+        <h2>Join The Community</h2>
+        <p class="section-desc">
+          Connect with other developers, sysadmins, homelabbers, and gamers building and using Theta42 software.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <h4>GitHub Discussions</h4>
+          <p>
+            Ask technical questions, report issues, submit feature requests, or contribute code across our open-source repositories.
+          </p>
+          <a href="https://github.com/theta42" target="_blank" rel="noopener" class="link-tag">Explore GitHub @theta42 ↗</a>
+        </div>
+
+        <div class="community-card">
+          <h4>Community Chat</h4>
+          <p>
+            Real-time chat and discussion space for homelab setups, identity architecture, AI coding agents, and CoreJourney gaming.
+          </p>
+          <a href="mailto:info@theta42.com?subject=Community%20Chat%20Invite" class="link-tag">Request Chat Invite ↗</a>
+        </div>
+
+        <div class="community-card">
+          <h4>CoreJourney Community</h4>
+          <p>
+            Play on the official hardcore Minecraft server, check live player statistics, join the discord, or contribute to the lore wiki.
+          </p>
+          <a href="https://corejourney.org" target="_blank" rel="noopener" class="link-tag">Visit CoreJourney ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 0.75rem;">Theta<span>42</span></div>
+          <span class="nav-badge">Community Edition</span>
+          <p class="footer-desc">
+            Open-source infrastructure, sovereign developer frameworks, and community-operated systems. Built for the web by William Mantly and Theta42.
+          </p>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h5>Ecosystem</h5>
+            <ul>
+              <li><a href="https://github.com/theta42/theta-suite" target="_blank" rel="noopener">Theta Suite</a></li>
+              <li><a href="https://github.com/theta42/proxy" target="_blank" rel="noopener">Theta Proxy</a></li>
+              <li><a href="https://github.com/wmantly/maki" target="_blank" rel="noopener">Maki Agent</a></li>
+              <li><a href="https://github.com/simpleworkjs" target="_blank" rel="noopener">SimpleWorkJS</a></li>
+              <li><a href="https://github.com/codeland-ecosystem" target="_blank" rel="noopener">Codeland</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Community</h5>
+            <ul>
+              <li><a href="https://corejourney.org" target="_blank" rel="noopener">CoreJourney Stats</a></li>
+              <li><a href="https://wiki.corejourney.org" target="_blank" rel="noopener">CoreJourney Wiki</a></li>
+              <li><a href="https://william.mantly.vip/" target="_blank" rel="noopener">William's Notes</a></li>
+              <li><a href="#donate">Support &amp; Donate</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Theta42</h5>
+            <ul>
+              <li><a href="https://theta42.com/" target="_blank" rel="noopener">Commercial AI On-Prem ↗</a></li>
+              <li><a href="https://theta42.com/#security-deep-dive" target="_blank" rel="noopener">Security Architecture</a></li>
+              <li><a href="mailto:info@theta42.com">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Theta42 LLC. All open-source software released under MIT License.
+        </div>
+        <div>
+          <a href="#">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
